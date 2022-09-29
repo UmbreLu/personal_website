@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<br>
+<h1 class="title">Seja Bem-Vindo(a)!</h1>
+<br>
+<img src="{{url_for('static', filename='home_pic.jpg')}}" alt="imagem ilustrativa" class="mid_text">
+<br>
+<p>
+Essa &eacute; a minha p&aacute;gina pessoal. Aqui voc&ecirc; pode saber mais sobre mim, visualizar meu curr&iacute;culo, acessar meu portif&oacute;lio e ver minhas publica&ccedil;&otilde;es.
+</p>  
+<p>
+Para saber mais sobre mim, acesse a minha "bio".
+Caso queira me contatar, bastar optar pelo canal que preferir indicado na sess&atilde;o "Contato".
+</p>
+{% endblock %}
