@@ -16,6 +16,7 @@ div.outer {
 
 
 div.nav {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-left: 8%;
     margin-right: 3%;
     width: 80%;
@@ -25,7 +26,7 @@ div.nav {
     min-height: 3em;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255,255,255,0.9);
     border: 1px solid black;
     transform: translateY(15%);
 }
@@ -46,29 +47,44 @@ div.spread {
     padding: 40px;
 }
 
+div.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.changing {
+    margin-top: 30px;
+    min-width: 40%;
+}
+
 @media (max-width: 700px) {
       div.nav {
-              margin-left: 27%;
-              margin-right: 3%;
+              margin-left: 0;
               width: 40%;
               display: flex;
               flex-direction: column;
-              position: fixed;
+              position: relative;
               min-height: 3em;
               justify-content: space-around;
               align-items: center;
-              background-color: rgba(255,255,255,0.6);
+              background-color: rgba(255,255,255,0.3);
               border: 1px solid black;
-              transform: translateY(5%);
+              transform: translateY(20%);
                 }
        div.space {
-              height: 100px;
+              height: 0;
           }
        div.spread {
               margin-right: 1%;
               align: center;
               display: block;
               padding: 40px;
+          }
+       div.flex-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
           }
             }
 
