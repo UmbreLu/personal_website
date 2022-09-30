@@ -20,28 +20,38 @@
              background-size: cover;
              ">
   <div class="outer">
-  <div class="transbox nav">
+  <div class="nav">
       <!--The header block is here-->
-      <ul class="nav">
-          <li>
-              <a class="button" href="{{ url_for('greeting') }}">saudações</a>
-          </li>
-          <li>
-              <a class="button" href="{{ url_for('home') }}">home</a>
-          </li>
-          <li>
-              <a class="button" href="{{ url_for('bio') }}">bio</a>
-          </li>
-          <li>
-              <a class="button" href="{{ url_for('contato') }}">contato</a>
-          </li>
-          <li>
-              <a class="button" href="{{ url_for('jobs') }}">trabalhos</a>
-          </li>
-          <li>
-              <a class="button" href="{{ url_for('resume') }}">curr&iacute;culo</a>
-          </li>
-      </ul>
+      <a class="button" href="{{ url_for('greeting') }}">
+          <div>
+              ol&aacute;
+          </div>
+      </a>
+      <a class="button" href="{{ url_for('home') }}">
+          <div>
+              home
+          </div>
+      </a>
+      <a class="button" href="{{ url_for('bio') }}">
+          <div>
+              bio
+          </div>
+      </a>
+      <a class="button" href="{{ url_for('contato') }}">
+          <div>
+              contato
+          </div>
+      </a>
+      <a class="button" href="{{ url_for('jobs') }}">
+          <div>
+              trabalhos
+          </div>
+      </a>
+      <a class="button" href="{{ url_for('resume') }}">
+          <div>
+              curr&iacute;culo
+          </div>
+      </a>
           <!--The header block is here-->
   </div>
   <div class="transbox spread">
