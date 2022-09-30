@@ -23,36 +23,38 @@
   <div class="nav">
       <!--The header block is here-->
       <a class="button" href="{{ url_for('greeting') }}">
-          <div>
-              [-ol&aacute;-]
+          <div class="nav_item">
+              ol&aacute;
           </div>
       </a>
       <a class="button" href="{{ url_for('home') }}">
-          <div>
-              [-home-]
+          <div class="nav_item">
+              home
           </div>
       </a>
       <a class="button" href="{{ url_for('bio') }}">
-          <div>
-              [-bio-]
+          <div class="nav_item">
+              bio
           </div>
       </a>
       <a class="button" href="{{ url_for('contato') }}">
-          <div>
-              [-contato-]
+          <div class="nav_item">
+              contato
           </div>
       </a>
       <a class="button" href="{{ url_for('jobs') }}">
-          <div>
-              [-trabalhos-]
+          <div class="nav_item">
+              trabalhos
           </div>
       </a>
       <a class="button" href="{{ url_for('resume') }}">
-          <div>
-              [-curr&iacute;culo-]
+          <div class="nav_item">
+              curr&iacute;culo
           </div>
       </a>
           <!--The header block is here-->
+  </div>
+  <div class="space">
   </div>
   <div class="transbox spread">
 		{% block body %}
