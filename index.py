@@ -73,7 +73,7 @@ def errorlog():
     """
     returns the error_log.txt file
     """
-    with open('error_log.txt') as file:
+    with open('error_log.txt', 'r+') as file:
         return file.read()
     return 'Something went wrong'
 

@@ -53,7 +53,7 @@ class Analytics:
         try:
             return self.db.query('SELECT rowid, * FROM daily', option='all')
         except exception as err:
-            return err
+            return str(err)
 
     def current(self):
         return self.accesses
