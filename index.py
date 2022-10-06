@@ -71,11 +71,9 @@ def current():
 @app.get('/errorlog')
 def errorlog():
     """
-    returns the error_log.txt file
+    returns the error log records
     """
-    with open('error_log.txt', 'r+') as file:
-        return file.read()
-    return 'Something went wrong'
+    return stats.error_log()
 
 
 if __name__ == "__main__":

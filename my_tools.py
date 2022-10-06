@@ -16,6 +16,7 @@ class Analytics:
             'resume': 0
         }
         self.db = Operator(db_file)
+        self.log = '-beginnig-'
 
     def analyse(self, request):
         if request.url_root != 'https://lucaspinto.dev.br/':
@@ -39,9 +40,8 @@ class Analytics:
                 *self.accesses.values()
             )
         except exception as err:
+            self.log += '\n' + str(err)
             #print('exception block')
-            with open('error_log.txt', 'w+') as log:
-                log.write(str(err))
         finally:
             #print('finally block')
             self.today = date.today()
@@ -53,7 +53,10 @@ class Analytics:
         try:
             return self.db.query('SELECT rowid, * FROM daily', option='all')
         except exception as err:
-            return str(err)
+            self.log += '\n' + str(err)
+        
+    def error_log(self):
+        return self.log
 
     def current(self):
         return self.accesses
