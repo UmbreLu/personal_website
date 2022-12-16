@@ -7,27 +7,28 @@ Contato
 {% block body %}
 <h1 class="title">Contato</h1>
 <br>
+<table><tr><td>
 <p>
 Encontre-me nas redes sociais:
 </p>
 <ul>
     <li>
         <strong>
-            <a href="https://www.linkedin.com/in/lucas-pinto-b77b81172/" target="_blanck">
+            <a class="normal" href="https://www.linkedin.com/in/lucas-pinto-b77b81172/" target="_blanck">
                 LinkedIn
             </a>
         </strong>
     </li>
     <li>
         <strong>
-            <a href="https://github.com/UmbreLu" target="_blanck">
+            <a class="normal" href="https://github.com/UmbreLu" target="_blanck">
                 Github
             </a>
         </strong>
     </li>
     <li>
         <strong>
-            <a href="https://www.credly.com/users/lucas-pinto.58bbda0a/badges" target="_blanck">
+            <a class="normal" href="https://www.credly.com/users/lucas-pinto.58bbda0a/badges" target="_blanck">
                 Credly
             </a>
         </strong>
@@ -38,7 +39,9 @@ Encontre-me nas redes sociais:
 Email:
 </p>
 <ul>
-    <li><strong><a href="mailto:lucaspinto90@hotmail.com">lucaspinto90@hotmail.com</strong></li>
+    <li><strong><a class="normal" href="mailto:lucaspinto90@hotmail.com">lucaspinto90@hotmail.com</strong></li>
 </ul>
+</td><td>
 <img src="{{ url_for('static', filename='inspiration.jpg') }}" alt="inspira&ccedil;&atilde;o" class="mid_text">
+</td></tr></table>
 {% endblock %}

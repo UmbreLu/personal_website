@@ -1,6 +1,7 @@
 body {
   font-family: 'Libre Baskerville', serif;
-  color:rgb(48,48,48); 
+  /*color:rgb(48,48,48); */
+  color:rgb(48,48,48);
   text-align: justify;
   text-justify: inter-word;
   font-size: 1.0em;
@@ -12,21 +13,37 @@ p {
 }
 
 div.nav {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-wrap: wrap;
     /*flex-direction: row;*/
     position: fixed;
     left: 50%;
-    transform: translate(-50%, -12%);
-    min-height: 2em;
+    transform: translate(-50%, -150%);
+    min-height: 1em;
     justify-content: space-around;
     align-items: center;
-    background-color: rgba(230,230,230,1.0);
-    border: 1px solid black;
-    max-width: 900px;
-    min-width: 90%;
-    padding: 15px;
+    background-color: rgb(48, 48, 48); 
+    min-width: 100%;
+}
+
+div.nav_item {
+    color: darkgrey;
+    font-weight: bold;
+    min-width: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+div.logo {
+    margin-right: 10px;
+   color: lightgrey;
+   cursor: default;
+   font-size: 1.333em;
+}
+
+div.nav_item:hover, div.nav_item:active {
+    background-color: black;
 }
 
 div.twitter-wrapper {
@@ -40,25 +57,6 @@ div.space {
     height: 1px;
 }
 
-div.nav_item {
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.35);
-    font-weight: bold;
-    margin: 8px;
-    min-width: 20px;
-    text-align: center;
-    font-size: 1.1em;
-}
-
-div.spread {
-    margin: auto;
-    align: center;
-    display: block;
-    padding-top: 60px;
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 1000px;
-}
-
 div.flex-container {
     display: flex;
     flex-direction: row;
@@ -68,6 +66,30 @@ div.flex-container {
 div.changing {
     margin-top: 30px;
     min-width: 40%;
+}
+
+div.transbox {
+    margin: auto;
+    margin-top: 60px;
+    align: center;
+    display: block;
+    padding-top: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1000px;
+    background-color: rgba(255,255,255,0.5);
+    border: 2px solid rgb(48,48,48);
+}
+
+div.home_outer {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 700px) {
@@ -84,27 +106,17 @@ div.changing {
               border: 1px solid black;
               transform: translateY(20%);
                 }*/
-       div.space {
-              height: 0;
-          }
-       div.spread {
-              margin-right: 1%;
-              align: center;
-              display: block;
-              padding-top: 130px;
-              padding-left: 25px;
-              padding-right: 25px;
-          }
        div.flex-container {
               display: flex;
               flex-direction: column;
               justify-content: space-around;
           }
-            }
-
-div.transbox {
-  background-color: rgba(255,255,255,0.3);
-  border: 1px solid black;
+        div.nav {
+            transform: translate(-50%, -75%);
+        }
+        div.home_outer {
+                height: 440px;
+        }
 }
 
 img.profile {
@@ -120,8 +132,8 @@ img.mid_text {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
-    max-width: 300px;
+    max-width: 400px;
+    min-width: 100px;
 }
 
 .title {
@@ -150,6 +162,10 @@ img.mid_text {
     transform: translate(-50%, -50%);
 }
 
+.spread {
+    width: 100%;
+}
+
 ul.nav {
     list-style-type:none;
     margin-top: 30px;
@@ -158,4 +174,24 @@ ul.nav {
 }
 li {
     margin-top: 10px;
+}
+
+a.normal {
+  color:rgb(48,48,48); 
+}
+
+a.normal:link {
+    text-decoration: underline;
+}
+
+a.normal:visited {
+    text-decoration: underline;
+}
+
+a.normal:hover {
+    text-decoration: none;
+}
+
+a.normal:active {
+    text-decoration: none;
 }

@@ -30,9 +30,11 @@
              background-color: #777777;
              background-size: cover;
              ">
-  <div class="outer">
   <div class="nav">
       <!--The header block is here-->
+      <div class="logo">
+        LUCAS PINTO .dev
+      </div>
       <a class="button" href="{{ url_for('home') }}">
           <div class="nav_item">
               bem-vindo
@@ -55,14 +57,13 @@
       </a>
       <a class="button" href="{{ url_for('bio') }}">
           <div class="nav_item">
-              sobre_mim
+              sobre mim
           </div>
       </a>
           <!--The header block is here-->
   </div>
-  <div class="space">
-  </div>
-  <div class="transbox spread">
+  <div class="outer">
+  <div class="transbox">
 		{% block body %}
 		{% endblock%}
   </div><!-- transbox div closure -->	
