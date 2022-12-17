@@ -15,6 +15,7 @@ p {
 div.nav {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     /*flex-direction: row;*/
     position: fixed;
     left: 0;
@@ -36,7 +37,7 @@ div.nav_item {
 }
 
 div.logo {
-   margin-right: 40px;
+   margin-right: 25px;
    color: lightgrey;
    cursor: default;
    font-size: 1.333em;
