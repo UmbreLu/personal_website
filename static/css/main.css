@@ -84,6 +84,7 @@ div.transbox {
 div.back_img {
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     border-radius: 30px;
 }
 
