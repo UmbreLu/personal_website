@@ -36,7 +36,7 @@ div.nav_item {
 }
 
 div.logo {
-   margin-right: 20px;
+   margin-right: 40px;
    color: lightgrey;
    cursor: default;
    font-size: 1.333em;
@@ -73,7 +73,7 @@ div.transbox {
     margin-top: 60px;
     align: center;
     display: block;
-    padding-top: 0px;
+    padding-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
     max-width: 1000px;
