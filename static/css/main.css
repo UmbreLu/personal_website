@@ -56,7 +56,7 @@ div.flex-container {
 div.twitter-wrapper {
     background-color: #1DA1F2;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px 20px 10px 20px;
 }
 
 div.space {
@@ -109,54 +109,6 @@ div.home_outer {
     align-items: center;
 }
 
-@media (max-width: 775px) {
-/*      div.nav {
-              margin-left: 0;
-              width: 40%;
-              display: flex;
-              flex-wrap: wrap;
-              position: relative;
-              min-height: 3em;
-              justify-content: space-around;
-              align-items: center;
-              background-color: rgba(255,255,255,0.3);
-              border: 1px solid black;
-              transform: translateY(20%);
-                }*/
-       div.flex-container {
-              display: flex;
-              flex-direction: column;
-              justify-content: space-around;
-          }
-        div.nav {
-        }
-        div.nav_item {
-            padding: 5px;
-        }
-        div.logo {
-        }
-        div.home_outer {
-                height: 440px;
-        }
-}
-
-img.profile {
-
-  width: 60%;
-  max-width: 300px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-img.mid_text {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 400px;
-    min-width: 100px;
-}
-
 .title {
     text-align: center;
 }
@@ -189,6 +141,66 @@ img.mid_text {
 
 .spread {
     width: 100%;
+}
+
+@media (max-width: 775px) {
+/*      div.nav {
+              margin-left: 0;
+              width: 40%;
+              display: flex;
+              flex-wrap: wrap;
+              position: relative;
+              min-height: 3em;
+              justify-content: space-around;
+              align-items: center;
+              background-color: rgba(255,255,255,0.3);
+              border: 1px solid black;
+              transform: translateY(20%);
+                }*/
+       div.flex-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+          }
+        div.nav {
+        }
+        div.over_back_img {
+            padding: 5px;
+        }
+        div.twitter-wrapper {
+            padding: 0px 10px 0px 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        div.nav_item {
+            padding: 5px;
+        }
+        div.logo {
+        }
+        div.home_outer {
+                height: 440px;
+        }
+        .big_text{
+            font-size: 1.0em;
+        }
+}
+
+img.profile {
+
+  width: 60%;
+  max-width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.mid_text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+    min-width: 100px;
 }
 
 ul.nav {
