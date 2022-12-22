@@ -5,22 +5,22 @@
 {% block body %}
 <br>
 <br>
-<div class="spread back_img" style="background-image: url({{ url_for('static', filename='pc_coffee.jpg') }});">
-    <div class="home_outer" >
-<h1 class="title" style="background-color: rgb(255, 255, 255, 0.7)">Seja<br>Bem-Vindo!</h1>
-        <div style="color: black; display: block; width: 80%; margin: auto; background-color: rgb(255, 255, 255, 0.3); padding: 20px;">
-<br>
-<br>
-            <p>
-                <strong>Esse site &eacute; o meu cart&atilde;o de visita virtual.
+<div>
+    <h1 class="title">Seja<br>Bem-Vindo!</h1>
+</div>
+<div class="back_img" style="background-image: url({{ url_for('static', filename='pc_coffee.jpg') }});">
+    <div class="over_back_img">
+        <br>
+        <br>
+        <p class="big_text">
+            <strong>Esse site &eacute; o meu cart&atilde;o de visita virtual.
                 Aqui voc&ecirc; acha informa&ccedil;&otilde;es relevantes sobre o meu perfil profissional.</strong>
-            </p>
-            <p>
-                <strong>Sinta-se &agrave; vontade e obrigado por sua visita!</strong>
-            </p>
-<br>
-<br>
-        </div>
+        </p>
+        <p class="big_text">
+            <strong>Sinta-se &agrave; vontade e obrigado por sua visita!</strong>
+        </p>
+        <br>
+        <br>
     </div>
 </div>
 <br>
@@ -29,9 +29,9 @@
 <br>
 <br>
 <h2 style="text-align: center">Um pouco de Data Science!</h2>
-<div style="width: 100%; display: flex; justify-content: center;">
-<div class="twitter-wrapper">
-<blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">💥 Artificial intelligence in a nutshell!<a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> <a href="https://twitter.com/hashtag/Overview?src=hash&amp;ref_src=twsrc%5Etfw">#Overview</a> <a href="https://t.co/c9B6e5F47S">pic.twitter.com/c9B6e5F47S</a></p>&mdash; Data Science Dojo (@DataScienceDojo) <a href="https://twitter.com/DataScienceDojo/status/1597382333719527424?ref_src=twsrc%5Etfw">November 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+<div class="flex-container">
+    <div class="twitter-wrapper">
+        <blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">💥 Artificial intelligence in a nutshell!<a href="https://twitter.com/hashtag/DataScience?src=hash&amp;ref_src=twsrc%5Etfw">#DataScience</a> <a href="https://twitter.com/hashtag/AI?src=hash&amp;ref_src=twsrc%5Etfw">#AI</a> <a href="https://twitter.com/hashtag/Overview?src=hash&amp;ref_src=twsrc%5Etfw">#Overview</a> <a href="https://t.co/c9B6e5F47S">pic.twitter.com/c9B6e5F47S</a></p>&mdash; Data Science Dojo (@DataScienceDojo) <a href="https://twitter.com/DataScienceDojo/status/1597382333719527424?ref_src=twsrc%5Etfw">November 29, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 </div>
 {% endblock %}

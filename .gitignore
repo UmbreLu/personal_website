@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# VIM swap files
+*.swp
+
 # Distribution / packaging
 .Python
 build/
@@ -127,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Vim swap files
+.swp

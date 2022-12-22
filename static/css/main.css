@@ -8,6 +8,7 @@ body {
   line-height: 1.2;
 }
 
+
 p {
   text-indent: 3em;
 }
@@ -47,11 +48,15 @@ div.nav_item:hover, div.nav_item:active {
     background-color: black;
 }
 
+div.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
 div.twitter-wrapper {
     background-color: #1DA1F2;
     border-radius: 15px;
-    padding: 5px; 
-    border: 3px solid black;
+    padding: 20px;
 }
 
 div.space {
@@ -89,12 +94,18 @@ div.back_img {
     border-radius: 30px;
 }
 
+div.over_back_img {
+    padding: 50px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
 div.home_outer {
     height: 600px;
     max-width: 700px;
     margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -147,7 +158,11 @@ img.mid_text {
 }
 
 .title {
-  text-align: center
+    text-align: center;
+}
+
+.big_text {
+    font-size: 1.4em;
 }
 
 .fill {
