@@ -10,29 +10,32 @@ body {
 
 
 p {
-  text-indent: 3em;
+  text-indent: 3px;
 }
 
 div.nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
     /*flex-direction: row;*/
     position: fixed;
     left: 0;
     top: 0;
     min-height: 1em;
-    justify-content: space-around;
-    align-items: center;
     background-color: rgb(48, 48, 48); 
     min-width: 100%;
+}
+
+div.small-nav {
+    display: flex;
+    flex-direction: row;
 }
 
 div.nav_item {
     border-radius: 3px;
     color: darkgrey;
     font-weight: bold;
-    padding: 8px 1px;
+    padding: 8px 20px;
     text-align: center;
     font-size: 1.2em;
 }
@@ -44,9 +47,18 @@ div.nav_item:hover, div.nav_item:active {
 
 div.logo {
     border-radius: 3px;
-    padding: 6px 1px;
+    padding: 6px;
     color: darkgrey;
     font-size: 1.333em;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+div.logo-part {
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 div.logo:hover, div.logo:active {
@@ -90,7 +102,7 @@ div.transbox {
     padding-right: 40px;
     padding-bottom: 40px;
     max-width: 1000px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.6);
     border: 2px solid rgb(48,48,48);
 }
 
@@ -117,27 +129,43 @@ div.home_outer {
 }
 
 div.footer {
-    background-color: rgb(48, 48, 48);
-    min-height: 300px;
-    width: 104%;
     margin-top: 40px;
-    transform: translate(-2%, 8%);
     color: lightgrey;
+    display: flex;
+    flex-direction: column;
+}
+
+div.footer_div {
+    background-color: rgb(48, 48, 48);
     padding: 5px;
     padding-right: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
 }
 
 div.contact-pad {
     padding: 5px;
-    transform: translate(-5px, 0px);
+    min-width: 250px;
+    color: darkgrey;
+}
+
+div.badge_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.badge {
+    margin: 20px;
+    margin-top: 40px;
+    background-color: rgb(255,255,255,0.5);
+    border-radius: 4px;
+    border: 1px solid rgb(48,48,48);
 }
 
 .title {
-    text-align: center;
+    text-align: left;
 }
 
 .big_text {
@@ -170,7 +198,7 @@ div.contact-pad {
     width: 100%;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 740px) {
 /*      div.nav {
               margin-left: 0;
               width: 40%;
@@ -188,7 +216,7 @@ div.contact-pad {
             padding: 10px;
         }
         div.transbox {
-            margin-top: 120px;
+            margin-top: 170px;
         }
 
        div.flex-container {
@@ -210,14 +238,17 @@ div.contact-pad {
         div.nav_item {
             padding: 15px 10px;
             font-size: 1.1em;
-            min-width: 0;
+            min-width: 130px;
         }
         div.logo {
-            font-size: 2.5em;
-            margin-left: 0px;
-            margin-right: 0px;
+            margin: 7px;
+            margin-left: 10px;
+            padding: 7px;
+            font-size: 2.2em;
+            flex-direction: column;
+            min-width: 0px;
         }
-        a.logo {
+        div.logo-part {
         }
         div.home_outer {
             height: 440px;
@@ -226,8 +257,10 @@ div.contact-pad {
             font-size: 1.0em;
         }
         div.footer {
-            transform: translate(-4%, 8%);
-            width: 106%;
+        }
+        div.small-nav {
+            display: flex;
+            flex-direction: column;
         }
 }
 

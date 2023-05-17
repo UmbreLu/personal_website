@@ -32,26 +32,28 @@
              ">
   <div class="nav">
       <!--The header block is here-->
-      <a class="button logo" href="{{ url_for('home') }}">
+      <a class="button" href="{{ url_for('home') }}">
           <div class="logo">
-            LUCAS PINTO <small>.dev.br</small>
+            <div class="logo-part">LUCAS</div><div class="logo-part">PINTO</div><div class="logo-part"><small>.dev.br</small></div>
           </div>
       </a>
-      <a class="button" href="{{ url_for('resume') }}">
-          <div class="nav_item">
-              curr&iacute;culo
-          </div>
-      </a>
-      <a class="button" href="{{ url_for('jobs') }}">
-          <div class="nav_item">
-              portf&oacute;lio
-          </div>
-      </a>
-      <a class="button" href="{{ url_for('bio') }}">
-          <div class="nav_item">
-              sobre mim
-          </div>
-      </a>
+      <div class="small-nav">
+          <a class="button" href="{{ url_for('resume') }}">
+              <div class="nav_item">
+                  curr&iacute;culo
+              </div>
+          </a>
+          <a class="button" href="{{ url_for('jobs') }}">
+              <div class="nav_item">
+                  portf&oacute;lio
+              </div>
+          </a>
+          <a class="button" href="{{ url_for('bio') }}">
+              <div class="nav_item">
+                  sobre mim
+              </div>
+          </a>
+        </div>
           <!--The header block is here-->
   </div>
   <div class="outer">
@@ -62,37 +64,65 @@
   </div><!-- transbox div closure -->	
   </div><!-- outer div closure -->	
     <div class="footer">
-        <div class="contact-pad">
-            <p><b>
-                EMAIL
-            </B></P>
-            <P>
-                lucaspinto90@hotmail.com
-            </p>
+        <div class="badge_div">
+            <div class="badge">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1ca7971d-6ceb-431a-b5a3-8f6c681022ee" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="dd0b42b7-f863-4e36-9479-9f4412c357bd" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="05295f5e-82d4-4f21-a8bb-69f4c73c85b4" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1d03936b-efa3-460a-bbe7-3fc493f04426" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
+            <div class="badge">
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a985918a-fb7d-4fd6-9835-047cda569b0a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
         </div>
-        <div class="contact-pad">
-            <p><b>
-                EMAIL
-            </B></P>
-            <P>
-                lucaspinto90@hotmail.com
-            </p>
-        </div>
-        <div class="contact-pad">
-            <p><b>
-                EMAIL
-            </B></P>
-            <P>
-                lucaspinto90@hotmail.com
-            </p>
-        </div>
-        <div class="contact-pad">
-            <p><b>
-                EMAIL
-            </B></P>
-            <P>
-                lucaspinto90@hotmail.com
-            </p>
+        <div class="footer_div">
+            <a class="normal" href="mailto:lucaspinto90@hotmail.com">
+                <div class="contact-pad">
+                    <p><b>
+                        EMAIL
+                    </B></P>
+                    <P>
+                        lucaspinto90@hotmail.com
+                    </p>
+                </div>
+            </a>
+            <a class="normal" href="https://wa.me/161991214553" target="_blank">
+                <div class="contact-pad">
+                    <p><b>
+                        WHATSAPP
+                    </B></P>
+                    <P>
+                        +55 (61) 99121-4553
+                    </p>
+                </div>
+            </a>
+            <a class="normal" href="https://www.linkedin.com/in/lucaspinto90"
+                target="_blank">
+                <div class="contact-pad">
+                    <p><b>
+                        LINKED-IN
+                    </B></P>
+                    <P>
+                        linkedin.com/in/lucaspinto90
+                    </p>
+                </div>
+            </a>
+            <a class="normal" href="https://www.github.com/UmbreLu" target="_blank">
+                <div class="contact-pad">
+                    <p><b>
+                        GITHUB
+                    </B></P>
+                    <P>
+                        github.com/UmbreLu
+                    </p>
+                </div>
+            </a>
         </div>
     </div>
 </body>
