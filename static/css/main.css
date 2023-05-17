@@ -76,6 +76,10 @@ div.changing {
     min-width: 40%;
 }
 
+div.outer {
+    padding: 20px;
+}
+
 div.transbox {
     margin: auto;
     margin-top: 60px;
@@ -84,6 +88,7 @@ div.transbox {
     padding-top: 50px;
     padding-left: 40px;
     padding-right: 40px;
+    padding-bottom: 40px;
     max-width: 1000px;
     background-color: rgba(255,255,255,0.5);
     border: 2px solid rgb(48,48,48);
@@ -113,10 +118,22 @@ div.home_outer {
 
 div.footer {
     background-color: rgb(48, 48, 48);
-    min-height: 100px;
+    min-height: 300px;
     width: 104%;
     margin-top: 40px;
     transform: translate(-2%, 8%);
+    color: lightgrey;
+    padding: 5px;
+    padding-right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.contact-pad {
+    padding: 5px;
+    transform: translate(-5px, 0px);
 }
 
 .title {
@@ -167,6 +184,13 @@ div.footer {
               border: 1px solid black;
               transform: translateY(20%);
                 }*/
+        div.outer {
+            padding: 10px;
+        }
+        div.transbox {
+            margin-top: 120px;
+        }
+
        div.flex-container {
               display: flex;
               flex-direction: column;
