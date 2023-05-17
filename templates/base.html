@@ -32,12 +32,9 @@
              ">
   <div class="nav">
       <!--The header block is here-->
-      <div class="logo">
-        LUCAS PINTO <small>.dev.br</small>
-      </div>
-      <a class="button" href="{{ url_for('home') }}">
-          <div class="nav_item">
-              bem-vindo
+      <a class="button logo" href="{{ url_for('home') }}">
+          <div class="logo">
+            LUCAS PINTO <small>.dev.br</small>
           </div>
       </a>
       <a class="button" href="{{ url_for('resume') }}">
@@ -47,12 +44,7 @@
       </a>
       <a class="button" href="{{ url_for('jobs') }}">
           <div class="nav_item">
-              trabalhos
-          </div>
-      </a>
-      <a class="button" href="{{ url_for('contato') }}">
-          <div class="nav_item">
-              contato
+              portf&oacute;lio
           </div>
       </a>
       <a class="button" href="{{ url_for('bio') }}">
@@ -66,7 +58,18 @@
   <div class="transbox">
 		{% block body %}
 		{% endblock%}
+        
   </div><!-- transbox div closure -->	
   </div><!-- outer div closure -->	
+    <div class="footer">
+        <div>
+        </div>
+        <div>
+        </div>
+        <div>
+        </div>
+        <div>
+        </div>
+    </div>
 </body>
 </html>
