@@ -32,40 +32,16 @@ div.small-nav {
 }
 
 div.nav_item {
-    border-radius: 3px;
     color: darkgrey;
-    font-weight: bold;
-    padding: 8px 20px;
+    padding: 9px;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.333em;
 }
 
 div.nav_item:hover, div.nav_item:active {
     color: white;
     background-color: black;
 }
-
-div.logo {
-    border-radius: 3px;
-    padding: 6px;
-    color: darkgrey;
-    font-size: 1.333em;
-    min-width: 300px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-div.logo-part {
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-div.logo:hover, div.logo:active {
-    color: white;
-    background-color: black;
-}
-
 
 div.twitter-wrapper {
     background-color: #1DA1F2;
@@ -78,9 +54,29 @@ div.space {
 }
 
 div.flex-container {
+    padding: 9px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    color: darkgrey;
+    font-size: 1.333em;
+}
+
+div.flex-container:hover, div.flex-container:active {
+    color: white;
+    background-color: black;
+}
+
+div.logo-part-i {
+    margin: auto;
+    font-size: 1.333em;
+}
+
+div.logo-part-ii {
+    margin-left: auto;
+    margin-top: 8px;
+    margin-right: 20px;
+    font-size: 0.9em;
 }
 
 div.changing {
@@ -158,10 +154,14 @@ div.badge_div {
 
 div.badge {
     margin: 20px;
-    margin-top: 40px;
+    margin-bottom: 40px;
     background-color: rgb(255,255,255,0.5);
     border-radius: 4px;
     border: 1px solid rgb(48,48,48);
+}
+
+div.contact-pad:hover, div.contact-pad:active {
+    color: white;
 }
 
 .title {
@@ -199,32 +199,23 @@ div.badge {
 }
 
 @media (max-width: 740px) {
-/*      div.nav {
-              margin-left: 0;
-              width: 40%;
-              display: flex;
-              flex-wrap: wrap;
-              position: relative;
-              min-height: 3em;
-              justify-content: space-around;
-              align-items: center;
-              background-color: rgba(255,255,255,0.3);
-              border: 1px solid black;
-              transform: translateY(20%);
-                }*/
         div.outer {
             padding: 10px;
         }
         div.transbox {
-            margin-top: 170px;
+            margin-top: 20px;
         }
 
        div.flex-container {
               display: flex;
               flex-direction: column;
-              justify-content: space-around;
+              padding-top: 15px;
+              padding-bottom: 15px;
           }
         div.nav {
+            position: static;
+            flex-direction: column;
+            justify-content: center;
         }
         div.over_back_img {
             padding: 5px;
@@ -236,20 +227,26 @@ div.badge {
             justify-content: center;
         }
         div.nav_item {
-            padding: 15px 10px;
-            font-size: 1.1em;
+            padding: 5px;
+            font-size: 1.5em;
             min-width: 130px;
         }
         div.logo {
-            margin: 7px;
-            margin-left: 10px;
             padding: 7px;
             font-size: 2.2em;
             flex-direction: column;
             min-width: 0px;
         }
-        div.logo-part {
+        div.logo-part-i {
         }
+
+        div.logo-part-ii {
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: 20px;
+            font-size: 0.9em;
+        }
+
         div.home_outer {
             height: 440px;
         }
@@ -259,9 +256,14 @@ div.badge {
         div.footer {
         }
         div.small-nav {
-            display: flex;
             flex-direction: column;
         }
+        div.badge {
+            margin: 0px;
+            margin-bottom: 40px;
+            border: 0px solid rgb(48,48,48);
+        }
+
 }
 
 img.profile {
