@@ -33,7 +33,7 @@ div.small-nav {
 
 div.nav_item {
     color: darkgrey;
-    padding: 9px;
+    padding: 13px;
     text-align: center;
     font-size: 1.333em;
 }
@@ -65,6 +65,12 @@ div.flex-container {
 div.flex-container:hover, div.flex-container:active {
     color: white;
     background-color: black;
+    justify-content: space-between;
+}
+
+div.flex-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 div.logo-part-i {
@@ -267,7 +273,6 @@ div.contact-pad:hover, div.contact-pad:active {
 }
 
 img.profile {
-
   width: 60%;
   max-width: 300px;
   display: block;
@@ -281,6 +286,14 @@ img.mid_text {
     margin-right: auto;
     max-width: 400px;
     min-width: 100px;
+}
+
+img.mid_text_2 {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul.nav {
