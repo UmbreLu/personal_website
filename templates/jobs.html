@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Portfolio
+Portf&oacute;lio
 {% endblock %}
 
 {% block body %}
@@ -10,9 +10,14 @@ Portfolio
 </h1>
 <br>
     <p>
-        <strong>Este site!</strong><br>Aproveitando a oportunidade para estudo, preferi n&atilde;o utilizar ferramenta low-code ou no-code de desenvolvimento web.
+        <strong>Este site!</strong><br>Aproveitando a oportunidade para estudo, preferi n&atilde;o utilizar ferramentas low-code ou no-code de desenvolvimento web.
     </p>
-    <p><strong>An&aacute;lise</strong><br>
+    <p><strong>Dataset Flor de Iris</strong><br>
             <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">An&aacute;lise explorat&oacute;ria do dataset da Flor de &Iacute;ris</a>.
+    </p>
+    <p><strong>Imóveis em Brasília</strong><br>
+            <a class="normal" href="{{ url_for('static', filename='publicação_dados_imóveis.slides.html') }}"
+            target="_blank" rel="noopener noreferrer">Explora&ccedil;&atilde;o, tratamento e
+            an&aacute;lise de an&uacute;ncios de im&oacute;veis em Bras&iacute;lia-DF.</a>.
     </p>
 {% endblock %}
