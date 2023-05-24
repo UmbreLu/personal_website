@@ -222,8 +222,10 @@ div.contact-pad:hover, div.contact-pad:active {
         }
 
         div#language_selection_box {
+            display: flex;
             margin-top: 0px;
             justify-content: center;
+            flex-direction: row;
             position: static;
         }
 
