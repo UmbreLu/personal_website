@@ -156,12 +156,17 @@
   </div>
   <div class="outer">
     <div id="language_selection_box">
-        <div class="flag"><a href="{{ url_for(page) }}"><img width="25px" src="{{ url_for('static', filename='br.svg') }}" alt="Brazilian Portuguese"></a></div>
-        <div class="flag"><a href="{{ url_for(page, lang='en') }}"><img width="25px" src="{{ url_for('static', filename='us.svg') }}" alt="English"></a></div>
-        <div class="flag"><a href="{{ url_for(page, lang='cn') }}"><img width="25px" src="{{ url_for('static', filename='cn.svg') }}" alt="Chinese"></a></div>
-        <div class="flag"><a href="{{ url_for(page, lang='es') }}"><img width="25px" src="{{ url_for('static', filename='es.svg') }}" alt="Spanish"></a></div>
-        <div class="flag"><a href="{{ url_for(page, lang='fr') }}"><img width="25px" src="{{ url_for('static', filename='fr.svg') }}" alt="French"></a></div>
-        <div class="flag"><a href="{{ url_for(page, lang='de') }}"><img width="25px" src="{{ url_for('static', filename='de.svg') }}" alt="German"></a></div>
+        <a href="{{ url_for(page) }}"><img class="flag" width="25px" src="{{ url_for('static', filename='br.svg') }}" alt="Brazilian Portuguese"></a>
+        <div class="flag"></div>
+        <a href="{{ url_for(page, lang='en') }}"><img class="flag" width="25px" src="{{ url_for('static', filename='us.svg') }}" alt="English"></a>
+        <div class="flag"></div>
+        <a href="{{ url_for(page, lang='cn') }}"><img class="flag" width="25px" src="{{ url_for('static', filename='cn.svg') }}" alt="Chinese"></a>
+        <div class="flag"></div>
+        <a href="{{ url_for(page, lang='es') }}"><img class="flag" width="25px" src="{{ url_for('static', filename='es.svg') }}" alt="Spanish"></a>
+        <div class="flag"></div>
+        <a href="{{ url_for(page, lang='fr') }}"><img class="flag" width="25px" src="{{ url_for('static', filename='fr.svg') }}" alt="French"></a>
+        <div class="flag"></div>
+        <a href="{{ url_for(page, lang='de') }}"><img class="flag" width="25px" src="{{ url_for('static', filename='de.svg') }}" alt="German"></a>
     </div>
     <div class="transbox">
 		{% block body %}

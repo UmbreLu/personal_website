@@ -16,11 +16,6 @@ Portf&oacute;lio
     <p><strong>Dataset Flor de Iris</strong><br>
             <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">An&aacute;lise explorat&oacute;ria do dataset da Flor de &Iacute;ris</a>.
     </p>
-    <p><strong>Imóveis em Brasília</strong><br>
-            <a class="normal" href="{{ url_for('static', filename='anuncios_imoveis_df.slides.html') }}"
-            target="_blank" rel="noopener noreferrer">Explora&ccedil;&atilde;o, tratamento e
-            an&aacute;lise de an&uacute;ncios de im&oacute;veis em Bras&iacute;lia-DF.</a>.
-    </p>
 {% elif lang == "en" %}
     Jobs
 </h1>
@@ -31,10 +26,6 @@ Portf&oacute;lio
 <p>
     <strong>Iris Flower Dataset</strong><br>
     <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Exploratory analysis of the Iris Flower dataset in Portuguese</a>.
-</p>
-<p>
-    <strong>Real Estate in Brasilia</strong><br>
-        <a class="normal" href="{{ url_for('static', filename='anuncios_imoveis_df.slides.html') }}" target="_blank" rel="noopener noreferrer">Exploration, processing, and analysis of real estate listings in Brasilia-DF.</a>.
 </p>
 {% elif lang == "fr" %}
     Jobs
@@ -48,10 +39,6 @@ Portf&oacute;lio
 <p>
     <strong>Jeu de données Iris Flower</strong><br>
     <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Analyse exploratoire du jeu de données Iris Flower</a>.
-</p>
-<p>
-    <strong>Biens immobiliers à Brasilia</strong><br>
-    <a class="normal" href="{{ url_for('static', filename='anuncios_imoveis_df.slides.html') }}" target="_blank" rel="noopener noreferrer">Exploration, traitement et analyse des annonces immobilières à Brasilia-DF</a>.
 </p>
 {% endif %}
 {% endblock %}
