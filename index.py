@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -10,39 +10,56 @@ def greeting():
     return render_template('greeting.html')
 
 @app.get('/home')
-def home():
+def home(lang='pt'):
     """
     Main page.
     """
-    return render_template('home.html')
+    if request.args.get('lang'):
+        lang = request.args.get('lang')
+    return render_template(
+        'home.html',
+        page='home',
+        lang=lang
+        )
 
 @app.get('/bio')
-def bio():
+def bio(lang='pt'):
     """
     About myself page.
     """
-    return render_template('bio.html')
-
-@app.get('/contato.html')
-def contato():
-    """
-    This is the contact page.
-    """
-    return render_template('contato.html')
+    if request.args.get('lang'):
+        lang = request.args.get('lang')
+    return render_template(
+        'bio.html',
+        page='bio',
+        lang=lang
+    )
 
 @app.get('/jobs')
-def jobs():
+def jobs(lang='pt'):
     """
     Portfolio page.
     """
-    return render_template('jobs.html')
+    if request.args.get('lang'):
+        lang = request.args.get('lang')
+    return render_template(
+        'jobs.html',
+        page='jobs',
+        lang=lang
+        )
 
 @app.get('/resume')
-def resume():
+def resume(lang='pt'):
     """
     Displays resume page.
     """
-    return render_template('resume.html')
+    if request.args.get('lang'):
+        lang = request.args.get('lang')
+    return render_template(
+        'resume.html',
+        page='resume',
+        lang=lang
+        )
 
 
 if __name__ == "__main__":

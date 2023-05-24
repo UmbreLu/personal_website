@@ -6,11 +6,43 @@
 <br>
 <br>
     <div style="max-width: 500px; margin: auto;">
+        {% if lang == "pt" %}
         <h2 style="text-align: left;"><strong>Ci&ecirc;ncia de Dados</strong></h2>
         <br>
         <h2 style="text-align: center;"><strong>- & -</strong></h2>
         <br>
         <h2 style="text-align: right;"><strong>Desenvolvimento Python</strong></h2>
+        {% elif lang == "en" %}
+        <h2 style="text-align: left;"><strong>Data Science</strong></h2>
+        <br>
+        <h2 style="text-align: center;"><strong>- & -</strong></h2>
+        <br>
+        <h2 style="text-align: right;"><strong>Python Development</strong></h2>
+        {% elif lang == "cn" %}
+        <h2 style="text-align: left;"><strong>数据科学</strong></h2>
+        <br>
+        <h2 style="text-align: center;"><strong>- & -</strong></h2>
+        <br>
+        <h2 style="text-align: right;"><strong>Python 开发</strong></h2>
+        {% elif lang == "fr" %}
+        <h2 style="text-align: left;"><strong>Science des Donn&eacute;es</strong></h2>
+        <br>
+        <h2 style="text-align: center;"><strong>- & -</strong></h2>
+        <br>
+        <h2 style="text-align: right;"><strong>D&eacute;veloppement Python</strong></h2>
+        {% elif lang == "de" %}
+        <h2 style="text-align: left;"><strong>Data Science</strong></h2>
+        <br>
+        <h2 style="text-align: center;"><strong>- & -</strong></h2>
+        <br>
+        <h2 style="text-align: right;"><strong>Python-Entwicklung</strong></h2>
+        {% elif lang == "es" %}
+        <h2 style="text-align: left;"><strong>Ciencia de Datos</strong></h2>
+        <br>
+        <h2 style="text-align: center;"><strong>- & -</strong></h2>
+        <br>
+        <h2 style="text-align: right;"><strong>Desarrollo de Python</strong></h2>
+        {% endif %}
     </div>
 <br>
 <br>
@@ -28,6 +60,7 @@
             </div>
             </div>
             <div>
+{% if lang == "pt" %}
             &#9989; Certifica&ccedil;&atilde;o IBM <i>job ready</i> em Ci&ecirc;ncia de Dados
     <br>
     <br>
@@ -44,6 +77,92 @@
     <br>
     <br>
             &#9989; Conhecimento jur&iacute;dico:<br>Marco Civil da Internet e a Lei Geral de Prote&ccedil;&atilde;o de Dados
+{% elif lang == "en" %}
+            &#9989; Data Science job ready IBM certification
+    <br>
+    <br>
+            &#9989; Business Intelligence
+    <br>
+    <br>
+            &#9989; Data modeling, mining,<br>exploration, treatment and<br>analysis
+    <br>
+    <br>
+            &#9989; Graphs and Dashboards
+    <br>
+    <br>
+            &#9989; Machine Learning
+    <br>
+    <br>
+            &#9989; Knowledge on brazilian data regulation:<br>Civil Internet Milestone and<br>Data Protection General Law
+    {% elif lang == "cn" %}
+    &#9989; IBM 数据科学职位认证
+    <br>
+    <br>
+    &#9989; 商业智能
+    <br>
+    <br>
+    &#9989; 数据建模、挖掘、<br>探索、处理和分析
+    <br>
+    <br>
+    &#9989; 图表和仪表板
+    <br>
+    <br>
+    &#9989; 机器学习
+    <br>
+    <br>
+    &#9989; 巴西数据法规知识：<br>民用互联网里程碑和<br>数据保护总法律
+    {% elif lang == "fr" %}
+    &#9989; Certification IBM job ready en science des donn&eacute;es
+    <br>
+    <br>
+    &#9989; Business Intelligence
+    <br>
+    <br>
+    &#9989; Mod&eacute;lisation, exploration,<br>extraction, traitement et analyse des donn&eacute;es
+    <br>
+    <br>
+    &#9989; Graphiques et tableaux de bord
+    <br>
+    <br>
+    &#9989; Apprentissage automatique
+    <br>
+    <br>
+    &#9989; Connaissance de la r&eacute;glementation des donn&eacute;es br&eacute;siliennes :<br>Jalon Internet civil et<br>Loi g&eacute;n&eacute;rale sur la protection des donn&eacute;es
+    {% elif lang == "de" %}
+    &#9989; IBM-Zertifizierung f&uuml;r Data Science (job ready)
+    <br>
+    <br>
+    &#9989; Business Intelligence
+    <br>
+    <br>
+    &#9989; Datenmodellierung, Mining,<br>Exploration, Aufbereitung und Analyse
+    <br>
+    <br>
+    &#9989; Diagramme und Dashboards
+    <br>
+    <br>
+    &#9989; Maschinelles Lernen
+    <br>
+    <br>
+    &#9989; Kenntnisse der brasilianischen<br> Datenschutzgesetze:<br>Zivilrechtlicher<br>Internet-Meilenstein und<br>Allgemeines Datenschutzgesetz
+    {% elif lang == "es" %}
+    &#9989; Certificaci&oacute;n de IBM en Ciencia de Datos (preparado para el trabajo)
+    <br>
+    <br>
+    &#9989; Business Intelligence
+    <br>
+    <br>
+    &#9989; Modelado, miner&iacute;a,<br>exploraci&oacute;n, tratamiento y an&aacute;lisis de datos
+    <br>
+    <br>
+    &#9989; Gr&aacute;ficos y paneles de control
+    <br>
+    <br>
+    &#9989; Aprendizaje autom&aacute;tico
+    <br>
+    <br>
+    &#9989; Conocimiento en regulaci&oacute;n de datos en Brasil:<br>Hito del Internet Civil y<br>Ley General de Protecci&oacute;n de Datos
+    {% endif %}
         <br>
         <br>
     </div>

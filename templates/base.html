@@ -1,6 +1,18 @@
 <!DOCTYPE html>
-
+{% if lang == "pt" %}
 <html lang="pt-br">
+{% elif lang == "en" %}
+<html lang="en-us">
+{% elif lang == "cn" %}
+<html lang="zh-cn">
+{% elif lang == "fr" %}
+<html lang="fr-fr">
+{% elif lang == "de" %}
+<html lang="de-de">
+{% elif lang == "es" %}
+<html lang="es-es">
+{% endif %}
+
 <head>
 
     <!-- Google tag (gtag.js) -->
@@ -32,38 +44,130 @@
              ">
   <div class="nav">
       <!--The header block is here-->
+    {% if lang == "pt" %}
     <a class="button" href="{{ url_for('home') }}">
+    {% elif lang == "en" %}
+    <a class="button" href="{{ url_for('home', lang='en') }}">
+    {% elif lang == "cn" %}
+    <a class="button" href="{{ url_for('home', lang='cn') }}">
+    {% elif lang == "fr" %}
+    <a class="button" href="{{ url_for('home', lang='fr') }}">
+    {% elif lang == "de" %}
+    <a class="button" href="{{ url_for('home', lang='de') }}">
+    {% elif lang == "es" %}
+    <a class="button" href="{{ url_for('home', lang='es') }}">
+    {% endif %}
         <div class="flex-container">
             <div class="logo-part-i">LUCAS PINTO</div>
             <div class="logo-part-ii"><small>.dev.br</small></div>
         </div>
     </a>
     <div class="small-nav">
-          <a class="button" href="{{ url_for('resume') }}">
+            {% if lang == "pt" %}
+               <a class="button" href="{{ url_for('resume') }}">
+            {% elif lang == "en" %}
+               <a class="button" href="{{ url_for('resume', lang='en') }}">
+            {% elif lang == "cn" %}
+               <a class="button" href="{{ url_for('resume', lang='cn') }}">
+            {% elif lang == "fr" %}
+               <a class="button" href="{{ url_for('resume', lang='fr') }}">
+            {% elif lang == "de" %}
+               <a class="button" href="{{ url_for('resume', lang='de') }}">
+            {% elif lang == "es" %}
+               <a class="button" href="{{ url_for('resume', lang='es') }}">
+            {% endif %}
+
               <div class="nav_item">
-                  curr&iacute;culo
-              </div>
+                {% if lang == "pt" %}
+                curr&iacute;culo
+                {% elif lang == "en" %}
+                resume
+                {% elif lang == "cn" %}
+                简历
+                {% elif lang == "fr" %}
+                CV
+                {% elif lang == "de" %}
+                Lebenslauf
+                {% elif lang == "es" %}
+                curr&iacute;culum
+                {% endif %}
+                </div>
           </a>
-          <a class="button" href="{{ url_for('jobs') }}">
+            {% if lang == "pt" %}
+            <a class="button" href="{{ url_for('jobs') }}">
+            {% elif lang == "en" %}
+            <a class="button" href="{{ url_for('jobs', lang='en') }}">
+            {% elif lang == "cn" %}
+            <a class="button" href="{{ url_for('jobs', lang='cn') }}">
+            {% elif lang == "fr" %}
+            <a class="button" href="{{ url_for('jobs', lang='fr') }}">
+            {% elif lang == "de" %}
+            <a class="button" href="{{ url_for('jobs', lang='de') }}">
+            {% elif lang == "es" %}
+            <a class="button" href="{{ url_for('jobs', lang='es') }}">
+            {% endif %}
               <div class="nav_item">
-                  portf&oacute;lio
-              </div>
+                {% if lang == "pt" %}
+                portf&oacute;lio
+                {% elif lang == "en" %}
+                portfolio
+                {% elif lang == "cn" %}
+                作品集
+                {% elif lang == "fr" %}
+                portfolio
+                {% elif lang == "de" %}
+                Portfolio
+                {% elif lang == "es" %}
+                portafolio
+                {% endif %}
+                </div>
           </a>
-          <a class="button" href="{{ url_for('bio') }}">
+            {% if lang == "pt" %}
+            <a class="button" href="{{ url_for('bio') }}">
+            {% elif lang == "en" %}
+            <a class="button" href="{{ url_for('bio', lang='en') }}">
+            {% elif lang == "cn" %}
+            <a class="button" href="{{ url_for('bio', lang='cn') }}">
+            {% elif lang == "fr" %}
+            <a class="button" href="{{ url_for('bio', lang='fr') }}">
+            {% elif lang == "de" %}
+            <a class="button" href="{{ url_for('bio', lang='de') }}">
+            {% elif lang == "es" %}
+            <a class="button" href="{{ url_for('bio', lang='es') }}">
+            {% endif %}
               <div class="nav_item">
-                  sobre mim
-              </div>
+                {% if lang == "pt" %}
+                sobre mim
+                {% elif lang == "en" %}
+                about me
+                {% elif lang == "cn" %}
+                关于我
+                {% elif lang == "fr" %}
+                à propos de moi
+                {% elif lang == "de" %}
+                über mich
+                {% elif lang == "es" %}
+                sobre mí
+                {% endif %}
+                </div>
           </a>
     </div>
           <!--The header block is here-->
   </div>
   <div class="outer">
-  <div class="transbox">
+    <div id="language_selection_box">
+        <div class="flag"><a href="{{ url_for(page) }}"><img width="25px" src="{{ url_for('static', filename='br.svg') }}" alt="Brazilian Portuguese"></a></div>
+        <div class="flag"><a href="{{ url_for(page, lang='en') }}"><img width="25px" src="{{ url_for('static', filename='us.svg') }}" alt="English"></a></div>
+        <div class="flag"><a href="{{ url_for(page, lang='cn') }}"><img width="25px" src="{{ url_for('static', filename='cn.svg') }}" alt="Chinese"></a></div>
+        <div class="flag"><a href="{{ url_for(page, lang='es') }}"><img width="25px" src="{{ url_for('static', filename='es.svg') }}" alt="Spanish"></a></div>
+        <div class="flag"><a href="{{ url_for(page, lang='fr') }}"><img width="25px" src="{{ url_for('static', filename='fr.svg') }}" alt="French"></a></div>
+        <div class="flag"><a href="{{ url_for(page, lang='de') }}"><img width="25px" src="{{ url_for('static', filename='de.svg') }}" alt="German"></a></div>
+    </div>
+    <div class="transbox">
 		{% block body %}
 		{% endblock%}
-        
-  </div><!-- transbox div closure -->	
-  </div><!-- outer div closure -->	
+    </div><!-- transbox div closure -->	
+    </div><!-- outer div closure -->	
     <div class="footer">
         </div>
         <div class="footer_div">

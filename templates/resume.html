@@ -5,6 +5,7 @@ Curr&iacute;culo
 {% endblock %}
 
 {% block body %}
+{% if lang == "pt" %}
 <h1 class="title">Curr&iacute;culo</h1>
 <br>
 <h2>Certifica&ccedil;&atilde;o</h2>
@@ -14,7 +15,7 @@ IBM Data Science Professional Certificate
 <br>
 <h2>Forma&ccedil;&atilde;o</h2>
 <p>
-Ci&ecirc;ncia de Dados na Universidade Est&aacute;cio de S&aacute; (EAD - in&iacute;cio no segundo semestre de 2022)
+Ci&ecirc;ncia de Dados na Universidade Est&aacute;cio de S&aacute; (in&iacute;cio no segundo semestre de 2022)
 </p>
 <p>
 Bacharelado em Direito pela Universidade de Brasília - UnB (in&iacute;cio em 2010 e conclus&atilde;o em  2016)
@@ -97,6 +98,313 @@ Bacharelado em Direito pela Universidade de Brasília - UnB (in&iacute;cio em 20
 <p>
 <strong>N&iacute;vel b&aacute;sico:</strong>
 </p>
+{% elif lang == "en" %}
+  <h1 class="title">Resume</h1>
+  <br>
+  <h2>Certification</h2>
+  <p>
+  IBM Data Science Professional Certificate
+  </p>
+  <br>
+  <h2>Education</h2>
+  <p>
+  Data Science at Est&aacute;cio de S&aacute; University (started in the second semester of 2022)
+  </p>
+  <p>
+  Bachelor of Law at University of Brasilia - UnB (started in 2010 and completed in 2016)
+  </p>
+  <br>
+  <h2>Professional Experience</h2>
+  <br>
+  <b>Civil Lawyer</b> (civil compensation and Consumer Law - since 2017).
+  <br>
+  <br>
+  <b>Judicial Advisor</b> at a first instance court of the Brazilian common justice in the Court of Justice of Amazonas (2021).
+  <br>
+  <br>
+  <b>Freelancer</b> in web scraping for collecting public judicial data and freelance scripting (Bash and Python) for automation of repetitive administrative tasks (2023).
+  <br>
+  <br>
+  <h2>Languages</h2>
+  <p>
+  <b>Advanced English</b> (fluent in writing and speaking). Certificate: Oxford International Study Centre - English and Law Programme (2012).
+  </p>
+  <br>
+  <h2>IT and Data Tools</h2>
+  <div class="flex-list">
+    <div class="changing">
+      <p>
+      <strong>Intermediate level:</strong>
+      </p>
+      <ul>
+        <li>Microsoft Excel</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Plotly Dash</li>
+        <li>Flask</li>
+        <li>Tkinter</li>
+        <li>Requests</li>
+        <li>Selenium</li>
+        <li>Beautiful Soup</li>
+        <li>Linux</li>
+        <li>Bash</li>
+        <li>Git</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+    <div class="changing">
+      <p>
+      <strong>Basic level:</strong>
+      </p>
+{% elif lang == "es" %}
+  <h1 class="title">Currículum</h1>
+  <br>
+  <h2>Certificación</h2>
+  <p>
+  Certificado Profesional de Ciencia de Datos de IBM
+  </p>
+  <br>
+  <h2>Educación</h2>
+  <p>
+  Ciencia de Datos en la Universidad Estácio de Sá (inicio en el segundo semestre de 2022)
+  </p>
+  <p>
+  Licenciatura en Derecho en la Universidad de Brasilia - UnB (inicio en 2010 y finalización en 2016)
+  </p>
+  <br>
+  <h2>Experiencia Profesional</h2>
+  <br>
+  <b>Abogado civil</b> (compensación civil y Derecho del Consumidor - desde 2017).
+  <br>
+  <br>
+  <b>Asesor judicial</b> en un tribunal de primera instancia de la justicia común brasileña en el Tribunal de Justicia de Amazonas (2021).
+  <br>
+  <br>
+  <b>Freelancer</b> en web scraping para la recolección de datos judiciales públicos y scripting (Bash y Python) freelance para la automatización de tareas administrativas repetitivas (2023).
+  <br>
+  <br>
+  <h2>Idiomas</h2>
+  <p>
+  <b>Inglés avanzado</b> (escritura y habla fluidas). Certificado: Oxford International Study Centre - English and Law Programme (2012).
+  </p>
+  <br>
+  <h2>Herramientas de TI y Datos</h2>
+  <div class="flex-list">
+    <div class="changing">
+      <p>
+      <strong>Nivel intermedio:</strong>
+      </p>
+      <ul>
+        <li>Microsoft Excel</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Plotly Dash</li>
+        <li>Flask</li>
+        <li>Tkinter</li>
+        <li>Requests</li>
+        <li>Selenium</li>
+        <li>Beautiful Soup</li>
+        <li>Linux</li>
+        <li>Bash</li>
+        <li>Git</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+    <div class="changing">
+      <p>
+      <strong>Nivel básico:</strong>
+      </p>
+{% elif lang == "fr" %}
+  <h1 class="title">Curriculum Vitae</h1>
+  <br>
+  <h2>Certification</h2>
+  <p>
+  Certificat Professionnel en Science des Données d'IBM
+  </p>
+  <br>
+  <h2>Formation</h2>
+  <p>
+  Science des Données à l'Université Estácio de Sá (début au second semestre 2022)
+  </p>
+  <p>
+  Licence en Droit à l'Université de Brasilia - UnB (début en 2010 et achèvement en 2016)
+  </p>
+  <br>
+  <h2>Expérience Professionnelle</h2>
+  <br>
+  <b>Avocat civil</b> (responsabilité civile et droit de la consommation - depuis 2017).
+  <br>
+  <br>
+  <b>Conseiller juridique</b> au tribunal de première instance de la justice commune brésilienne à la Cour de Justice de l'Amazonas (2021).
+  <br>
+  <br>
+  <b>Freelancer</b> en web scraping pour la collecte de données judiciaires publiques et en scripting (Bash et Python) en freelance pour l'automatisation de tâches administratives répétitives (2023).
+  <br>
+  <br>
+  <h2>Langues</h2>
+  <p>
+  <b>Anglais avancé</b> (écriture et parole courantes). Certifié : Oxford International Study Centre - English and Law Programme (2012).
+  </p>
+  <br>
+  <h2>Outils Informatiques et Données</h2>
+  <div class="flex-list">
+    <div class="changing">
+      <p>
+      <strong>Niveau intermédiaire :</strong>
+      </p>
+      <ul>
+        <li>Microsoft Excel</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Plotly Dash</li>
+        <li>Flask</li>
+        <li>Tkinter</li>
+        <li>Requests</li>
+        <li>Selenium</li>
+        <li>Beautiful Soup</li>
+        <li>Linux</li>
+        <li>Bash</li>
+        <li>Git</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+    <div class="changing">
+      <p>
+      <strong>Niveau de base :</strong>
+      </p>
+{% elif lang == "de" %}
+  <h1 class="title">Lebenslauf</h1>
+  <br>
+  <h2>Zertifizierung</h2>
+  <p>
+  IBM Data Science Professional Certificate
+  </p>
+  <br>
+  <h2>Ausbildung</h2>
+  <p>
+  Data Science an der Universität Estácio de Sá (Beginn im zweiten Semester 2022)
+  </p>
+  <p>
+  Bachelor in Jura an der Universität von Brasília - UnB (Beginn 2010, Abschluss 2016)
+  </p>
+  <br>
+  <h2>Berufserfahrung</h2>
+  <br>
+  <b>Zivilrechtler</b> (Haftungsrecht und Verbraucherrecht - seit 2017).
+  <br>
+  <br>
+  <b>Mitarbeiter eines Richters</b> in erster Instanz der brasilianischen ordentlichen Gerichtsbarkeit am Obersten Gerichtshof von Amazonas (2021).
+  <br>
+  <br>
+  <b>Freelancer</b> für Web Scraping zur Sammlung öffentlicher Gerichtsdaten und Freelancer für Scripting (Bash und Python) zur Automatisierung wiederkehrender administrativer Aufgaben (2023).
+  <br>
+  <br>
+  <h2>Sprachen</h2>
+  <p>
+  <b>Fortgeschrittenes Englisch</b> (fließendes Schreiben und Sprechen). Zertifikat: Oxford International Study Centre - English and Law Programme (2012).
+  </p>
+  <br>
+  <h2>IT-Werkzeuge und Daten</h2>
+  <div class="flex-list">
+    <div class="changing">
+      <p>
+      <strong>Mittelstufe:</strong>
+      </p>
+      <ul>
+        <li>Microsoft Excel</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Plotly Dash</li>
+        <li>Flask</li>
+        <li>Tkinter</li>
+        <li>Requests</li>
+        <li>Selenium</li>
+        <li>Beautiful Soup</li>
+        <li>Linux</li>
+        <li>Bash</li>
+        <li>Git</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+    <div class="changing">
+      <p>
+      <strong>Grundkenntnisse:</strong>
+      </p>
+
+{% elif lang == "cn" %}
+  <h1 class="title">简历</h1>
+  <br>
+  <h2>认证</h2>
+  <p>
+  IBM数据科学专业证书
+  </p>
+  <br>
+  <h2>教育背景</h2>
+  <p>
+  在Estácio de Sá大学学习数据科学（2022年第二学期开始）
+  </p>
+  <p>
+  在巴西布拉干大学获得法学学士学位 - UnB（2010年开始，2016年毕业）
+  </p>
+  <br>
+  <h2>职业经历</h2>
+  <br>
+  <b>民事律师</b>（责任法和消费者法 - 自2017年起）。
+  <br>
+  <br>
+  <b>法官助理</b>在巴西普通法院的一审法院（亚马逊州高级法院）（2021年）。
+  <br>
+  <br>
+  <b>自由职业者</b>，从事网络爬虫收集公共司法数据和编写脚本（Bash和Python）以自动化重复的行政任务（2023年）。
+  <br>
+  <br>
+  <h2>语言</h2>
+  <p>
+  <b>流利的英语</b>（书写和口语）。证书：牛津国际研究中心 - 英语与法律项目（2012年）。
+  </p>
+  <br>
+  <h2>IT工具和数据</h2>
+  <div class="flex-list">
+    <div class="changing">
+      <p>
+      <strong>中级水平：</strong>
+      </p>
+      <ul>
+        <li>Microsoft Excel</li>
+        <li>Pandas</li>
+        <li>Numpy</li>
+        <li>Matplotlib</li>
+        <li>Seaborn</li>
+        <li>Plotly Dash</li>
+        <li>Flask</li>
+        <li>Tkinter</li>
+        <li>Requests</li>
+        <li>Selenium</li>
+        <li>Beautiful Soup</li>
+        <li>Linux</li>
+        <li>Bash</li>
+        <li>Git</li>
+        <li>HTML5</li>
+        <li>CSS</li>
+      </ul>
+    </div>
+    <div class="changing">
+      <p>
+      <strong>基础水平：</strong>
+      </p>
+{% endif %}
 <ul class="changing">
     <li>
        Microsoft Power BI 

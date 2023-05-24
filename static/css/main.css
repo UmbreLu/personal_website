@@ -96,13 +96,21 @@ div.outer {
 
 div.transbox {
     margin: auto;
-    margin-top: 60px;
+    margin-top: 30px;
     align: center;
     display: block;
     padding: 40px;
     max-width: 1000px;
     background-color: rgba(255,255,255,0.75);
     border: 2px solid rgb(48,48,48);
+}
+
+div#language_selection_box {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    position: static;
 }
 
 div.back_img {
@@ -213,6 +221,12 @@ div.contact-pad:hover, div.contact-pad:active {
             padding: 5px;
         }
 
+        div#language_selection_box {
+            margin-top: 0px;
+            justify-content: center;
+            position: static;
+        }
+
        div.flex-container {
               display: flex;
               flex-direction: column;
@@ -296,6 +310,10 @@ img.mid_text_2 {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+div.flag {
+    margin: 2px;
 }
 
 ul.nav {
