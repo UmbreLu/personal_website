@@ -1,44 +1,83 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Portf&oacute;lio
+{% if lang == "pt" %}
+    Portf&oacute;lio
+{% elif lang == "en" %}
+    Portfolio
+{% elif lang == "cn" %}
+    作品集
+{% elif lang == "fr" %}
+    Portfolio
+{% elif lang == "de" %}
+    Portfolio
+{% elif lang == "es" %}
+    Portafolio
+{% endif %}
 {% endblock %}
 
 {% block body %}
 <h1 class="title">
-{% if lang == "pt" %}
+  {% if lang == "pt" %}
     Trabalhos
-</h1>
-<br>
-    <p>
-        <strong>Este site!</strong><br>Front-end: desenvolvido por meio de edi&ccedil;&atilde;o direta dos c&oacute;digos HTML, CSS e Javascript.<br>Back-end: framework Flask do Python.
-    </p>
-    <p><strong>Dataset Flor de Iris</strong><br>
-            <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">An&aacute;lise explorat&oacute;ria do dataset da Flor de &Iacute;ris</a>.
-    </p>
-{% elif lang == "en" %}
+  {% elif lang == "en" %}
     Jobs
-</h1>
-<br>
-    <p>
-        <strong>This website!</strong><br>Front-end: developed through direct editing of HTML, CSS, and Javascript code.<br>Back-end: Python's Flask framework.
-</p>
-<p>
-    <strong>Iris Flower Dataset</strong><br>
-    <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Exploratory analysis of the Iris Flower dataset in Portuguese</a>.
-</p>
-{% elif lang == "fr" %}
+  {% elif lang == "fr" %}
+    Emplois
+  {% elif lang == "cn" %}
+    工作
+  {% elif lang == "de" %}
     Jobs
+  {% elif lang == "es" %}
+    Trabajos
+  {% endif %}
 </h1>
 <br>
 <p>
+  {% if lang == "pt" %}
+    <strong>Este site!</strong><br>
+    Front-end: desenvolvido por meio de edição direta dos códigos HTML, CSS e Javascript.<br>
+    Back-end: framework Flask do Python.
+  {% elif lang == "en" %}
+    <strong>This website!</strong><br>
+    Front-end: developed through direct editing of HTML, CSS, and Javascript code.<br>
+    Back-end: Python's Flask framework.
+  {% elif lang == "fr" %}
     <strong>Ce site web !</strong><br>
     Front-end : développé en éditant directement le code HTML, CSS et Javascript.<br>
     Back-end : framework Flask de Python.
+  {% elif lang == "cn" %}
+    <strong>这个网站！</strong><br>
+    前端开发：直接编辑HTML、CSS和Javascript代码。<br>
+    后端：Python的Flask框架。
+  {% elif lang == "de" %}
+    <strong>Diese Website!</strong><br>
+    Front-End: entwickelt durch direkte Bearbeitung von HTML, CSS und Javascript-Code.<br>
+    Back-End: Python's Flask-Framework.
+  {% elif lang == "es" %}
+    <strong>¡Este sitio web!</strong><br>
+    Front-end: desarrollado mediante la edición directa de código HTML, CSS y Javascript.<br>
+    Back-end: framework Flask de Python.
+  {% endif %}
 </p>
 <p>
+  {% if lang == "pt" %}
+    <strong>Dataset Flor de Iris</strong><br>
+    <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Análise exploratória do dataset da Flor de Íris</a>.
+  {% elif lang == "en" %}
+    <strong>Iris Flower Dataset</strong><br>
+    <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Exploratory analysis of the Iris Flower dataset in Portuguese</a>.
+  {% elif lang == "fr" %}
     <strong>Jeu de données Iris Flower</strong><br>
     <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Analyse exploratoire du jeu de données Iris Flower</a>.
-</p>
+  {% elif lang == "cn" %}
+    <strong>鸢尾花数据集</strong><br>
+    <a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">鸢尾花数据集的探索性分析</a>（葡萄牙语）。
+  {% elif lang == "de" %}
+    <strong>Datensatz Iris Flower</strong><br>
+<a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Explorative Analyse des Iris Flower-Datensatzes auf Portugiesisch</a>.
+{% elif lang == "es" %}
+<strong>Conjunto de datos de la Flor de Iris</strong><br>
+<a class="normal" href="{{ url_for('static', filename='iris_portugues.slides.html') }}" target="_blank" rel="noopener noreferrer">Análisis exploratorio del conjunto de datos de la Flor de Iris en portugués</a>.
 {% endif %}
 {% endblock %}

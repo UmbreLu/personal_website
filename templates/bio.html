@@ -3,6 +3,7 @@
 {% block title %}Bio{% endblock %}
 
 {% block body %}
+{% if lang == "pt" %}
 <h1 class="title">Sobre Mim</h1>
 <br>
 <p>
@@ -26,4 +27,110 @@ trocarmos conhecimentos e <em>insights</em> sobre a carreira?
 <p>
 <strong>Muito obrigado</strong> por sua visita.
 </p>
+{% elif lang == "en" %}
+<h1 class="title">About Me</h1>
+<br>
+<p>
+Having a background in Law, I seized the opportunity presented by the Covid lockdown to embark on learning the fundamentals of programming.
+</p>
+<p>
+In 2022, I successfully obtained the <em>IBM Professional Certificate for Data Science</em> <a class="normal" href="https://www.youtube.com/watch?v=Ge_6oqt9QcY" target="_blanck">(regarding the certificate).</a>
+</p>
+<p>
+During that same year, I enrolled in a Data Science course at Estácio de Sá University through distance learning, aiming to augment my resume with formal academic credentials.
+</p>
+<p>
+At present, I am actively engaged in personal projects to enrich my portfolio, all while eagerly pursuing my long-awaited breakthrough into the job market as a data professional.
+</p>
+<p>
+If you, too, are at the outset of a new journey and harbor a keen interest in this field, why not engage in a mutually beneficial exchange of knowledge and insights about the career?
+</p>
+<p>
+Thank you sincerely for your visit.
+</p>
+{% elif lang == "fr" %}
+<h1 class="title">À Propos de Moi</h1>
+<br>
+<p>
+Ayant une formation en droit, j'ai saisi l'opportunité du confinement dû à la pandémie de Covid pour commencer à apprendre les bases de la programmation.
+</p>
+<p>
+En 2022, j'ai obtenu le certificat professionnel IBM en science des données (<em>IBM Professional Certificate for Data Science</em>) <a class="normal" href="https://www.youtube.com/watch?v=Ge_6oqt9QcY" target="_blank">(à propos du certificat)</a>.
+</p>
+<p>
+La même année, j'ai commencé à suivre un cours de science des données à l'Université Estácio de Sá, à distance, dans le but de compléter mon curriculum vitae par une formation académique formelle.
+</p>
+<p>
+Actuellement, je développe des projets personnels pour enrichir mon portfolio tout en cherchant ma première opportunité tant attendue sur le marché du travail en tant que professionnel des données.
+</p>
+<p>
+Si vous êtes également au début d'un nouveau parcours et que vous vous intéressez à ce domaine, que diriez-vous d'échanger des connaissances et des idées sur cette carrière ?
+</p>
+<p>
+Merci beaucoup pour votre visite.
+</p>
+{% elif lang == "de" %}
+<h1 class="title">Über Mich</h1>
+<br>
+<p>
+Mit einem Hintergrund in Jura habe ich die Covid-bedingte Lockdown-Phase genutzt, um mit dem Erlernen der Grundlagen der Programmierung zu beginnen.
+</p>
+<p>
+Im Jahr 2022 absolvierte ich das IBM Professional Certificate for Data Science <a class="normal" href="https://www.youtube.com/watch?v=Ge_6oqt9QcY" target="_blank">(weitere Informationen zum Zertifikat)</a>.
+</p>
+<p>
+Im selben Jahr habe ich das Studium der Datenwissenschaften an der Universidade Estácio de Sá per Fernstudium aufgenommen, um meinen Lebenslauf um eine formale akademische Ausbildung zu ergänzen.
+</p>
+<p>
+Derzeit arbeite ich an persönlichen Projekten, um mein Portfolio zu erweitern, während ich nach meiner lang ersehnten ersten Anstellung als Datenexperte auf dem Arbeitsmarkt suche.
+</p>
+<p>
+Wenn Sie sich ebenfalls am Anfang einer neuen Reise befinden und Interesse an diesem Bereich haben, wie wäre es mit einem Austausch von Wissen und Einblicken zur Karriere?
+</p>
+<p>
+Vielen Dank für Ihren Besuch.
+</p>
+{% elif lang == "es" %}
+<h1 class="title">Sobre Mí</h1>
+<br>
+<p>
+Con una formación en Derecho, aproveché el confinamiento debido al Covid para comenzar a aprender los conceptos básicos de la programación.
+</p>
+<p>
+En 2022, obtuve el Certificado Profesional de IBM en Ciencia de Datos (<em>IBM Professional Certificate for Data Science</em>) <a class="normal" href="https://www.youtube.com/watch?v=Ge_6oqt9QcY" target="_blank">(acerca del certificado)</a>.
+</p>
+<p>
+En ese mismo año, comencé a estudiar Ciencia de Datos en la Universidad Estácio de Sá a través de la educación a distancia, con el objetivo de complementar mi currículum con una formación académica formal.
+</p>
+<p>
+Actualmente, sigo desarrollando proyectos personales para enriquecer mi portafolio mientras busco mi ansiada primera oportunidad en el mercado laboral como profesional de datos.
+</p>
+<p>
+Si también estás en el inicio de un nuevo camino y tienes curiosidad por esta área, ¿qué te parece si intercambiamos conocimientos e ideas sobre la carrera?
+</p>
+<p>
+Muchas gracias por tu visita.
+</p>
+{% elif lang == "cn" %}
+<h1 class="title">关于我</h1>
+<br>
+<p>
+拥有法学背景，我利用Covid封锁期间的机会开始学习编程的基础知识。
+</p>
+<p>
+2022年，我获得了IBM数据科学专业证书 (<em>IBM Professional Certificate for Data Science</em>) <a class="normal" href="https://www.youtube.com/watch?v=Ge_6oqt9QcY" target="_blank">(关于该证书)</a>。
+</p>
+<p>
+同年，我开始在Estácio de Sá大学远程学习数据科学课程，旨在通过正规的学术教育来补充我的简历。
+</p>
+<p>
+目前，我正在开展个人项目，丰富我的作品集，同时积极寻求作为数据专业人员在就业市场上的首次机会。
+</p>
+<p>
+如果您也刚刚踏上新的旅程，并对这个领域感兴趣，我们可以交流关于这个职业的知识和见解，如何？
+</p>
+<p>
+非常感谢您的访问。
+</p>
+{% endif %}
 {% endblock %}

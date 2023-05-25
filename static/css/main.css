@@ -108,6 +108,7 @@ div.transbox {
 div#language_selection_box {
     margin-top: 30px;
     display: flex;
+    display: -webkit-flex !important;
     flex-direction: row;
     justify-content: right;
     position: static;
