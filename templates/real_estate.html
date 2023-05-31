@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+
+{% block title %}Estimador de Pre&ccedil;os{% endblock %}
+
+{% block style %}
+<style>
+    p.prediction {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    select, input[type="number"], input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      margin-top: 5px;
+        font-size: 1.2em;
+    }
+
+    input[type="submit"] {
+        background-color: #444444;
+        color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .warning {
+      color: #ff0000;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+{% if lang == "pt" %}
+<h1 class="title">Estimativa de Pre&ccedil;o para Im&oacute;vel no DF</h1>
+<br>
+<p>
+Gostaria de ter uma ideia de qual seria o valor apropriado para anunciar seu im&oacute;vel no DF sem pagar caro a um corretor experiente ou a uma grande imobili&aacute;ria? Seus problemas acabaram!
+</p>
+<p>
+O meu estimador de pre&ccedil;os &eacute; uma intelig&ecirc;ncia artificial que foi treinada em cima de milhares de publica&ccedil;&otilde;es de an&uacute;ncios de im&oacute;veis no Distrito Federal e, assim, &eacute; capaz de estimar, com certa precis&atilde;o, o valor com o que seu im&oacute;vel poderia ser anunciado.
+</p>
+<p>
+Aproveite enquanto a ferramenta est&aacute; disponibilizada aqui gratuitamente.
+</p>
+  <br>
+{% if prediction is defined %}
+    <p class="prediction"><strong>Seu im&oacute;vel foi avaliado em: {{ prediction }}</strong></p>
+{% endif %}
+{% endif %}
+<br>
+<form action="{{ url_for('real_estate_post') }}" method="post">
+    <label for="categoria">Categoria do imóvel:</label>
+    <select id="categoria" name="categoria">
+      <option value="apartamento">Apartamento</option>
+      <option value="casa">Casa</option>
+      <option value="terreno">Terreno</option>
+      <option value="comercial">Comercial</option>
+    </select>
+
+    <label for="localizacao">Localização:</label>
+    <select id="localizacao" name="localizacao">
+      <option value="Asa Sul">Asa Sul</option>
+      <option value="Asa Norte">Asa Norte</option>
+      <option value="Lago Sul">Lago Sul</option>
+      <option value="Noroeste">Noroeste</option>
+        <option value="Lago Norte">Lago Norte</option>
+        <option value="Octogonal">Octogonal</option>
+        <option value="Taguatinga">Taguatinga</option>
+        <option value="Guará">Guará</option>
+        <option value="Sudoeste">Sudoeste</option>
+        <option value="Park Way">Park Way</option>
+        <option value="Sobradinho">Sobradinho</option>
+        <option value="Cruzeiro">Cruzeiro</option>
+        <option value="Jardim Botânico">Jardim Botânico</option>
+        <option value="Águas Claras">Águas Claras</option>
+        <option value="Ceilandia">Ceilandia</option>
+        <option value="Vila Planalto">Vila Planalto</option>
+        <option value="Setor Habitacional Tororo">Setor Habitacional Tororo</option>
+        <option value="Setor de Mansões Dom Bosco">Setor de Mansões Dom Bosco</option>
+        <option value="Granja Do Torto, Brasília">Granja Do Torto, Brasília</option>
+        <option value="Vila Da Telebrasilia">Vila Da Telebrasilia</option>
+        <option value="Zona Central de Brasília">Zona Central de Brasília</option>
+        <option value="Park Sul">Park Sul</option>
+        <option value="Setor de Habitações Coletivas Norte">Setor de Habitações Coletivas Norte</option>
+        <option value="Setor de Armazenagem e Abastecimento Norte">Setor de Armazenagem e Abastecimento Norte</option>
+        <option value="Centro de Atividades do Lago Norte">Centro de Atividades do Lago Norte</option>
+        <option value="Taquari">Taquari</option>
+        <option value="Jardins Mangueiral">Jardins Mangueiral</option>
+        <option value="Quadra Mista Sudoeste">Quadra Mista Sudoeste</option>
+        <option value="Setor De Autarquias Sul">Setor De Autarquias Sul</option>
+        <option value="Samambaia">Samambaia</option>
+        <option value="Mansões do Lago">Mansões do Lago</option>
+        <option value="Setor De Clubes Esportivos Sul, Brasília">Setor De Clubes Esportivos Sul, Brasília</option>
+        <option value="Guará">Guará</option>
+        <option value="Paranoá">Paranoá</option>
+        <option value="SIG - Setor De Industria Graficas">SIG - Setor De Industria Graficas</option>
+        <option value="Planaltina">Planaltina</option>
+        <option value="Recanto das Emas">Recanto das Emas</option>
+        <option value="Candangolândia">Candangolândia</option>
+        <option value="Noroeste">Noroeste</option>
+        <option value="Zona Rural">Zona Rural</option>
+        <option value="Setor Militar Urbano">Setor Militar Urbano</option>
+        <option value="Itapoã">Itapoã</option>
+        <option value="Zona Industrial">Zona Industrial</option>
+        <option value="Arniqueiras, Águas Claras">Arniqueiras, Águas Claras</option>
+        <option value="Areal, Águas Claras">Areal, Águas Claras</option>
+        <option value="Zona Rural, Águas Claras">Zona Rural, Águas Claras</option>
+    </select>
+
+    <label for="area-util">Área útil (m<sup>2</sup>):</label>
+    <input type="number" id="area-util" name="area-util" required>
+
+    <label for="area-total">Área total (m<sup>2</sup>):</label>
+    <input type="number" id="area-total" name="area-total" required>
+
+    <label for="quantidade-quartos">Quantidade de quartos:</label>
+    <input type="number" id="quantidade-quartos" name="quantidade-quartos" required>
+
+    <label for="quantidade-banheiros">Quantidade de banheiros:</label>
+    <input type="number" id="quantidade-banheiros" name="quantidade-banheiros" required>
+
+    <label for="quantidade-vagas">Quantidade de vagas de garagem privativas:</label>
+    <input type="number" id="quantidade-vagas" name="quantidade-vagas" required>
+
+    <input type="submit" value="Enviar">
+
+    <p class="warning">Todos os campos devem ser preenchidos.</p>
+  </form>
+{% endblock %}
