@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import pandas as pd
+import numpy as np
 import pickle
 
 app = Flask(__name__)
@@ -188,28 +188,53 @@ def real_estate_post(lang='pt'):
     """
     post method
     """
-    data_entry = pd.DataFrame(
-    {'category': category[request.form["categoria"]],
-     'neighborhood': localizacao_decoder[localizacao_form.index(request.form["localizacao"])],
-     'footage': request.form["area-util"],
-     'total_footage': request.form["area-total"],
-     'bedrooms': request.form["quantidade-quartos"],
-     'bathrooms': request.form["quantidade-banheiros"],
-     'parking_space': request.form["quantidade-vagas"]
-    }, index=[0])
+#    data_entry = pd.DataFrame(
+#    {'category': category[request.form["categoria"]],
+#     'neighborhood': localizacao_decoder[localizacao_form.index(request.form["localizacao"])],
+#     'footage': request.form["area-util"],
+#     'total_footage': request.form["area-total"],
+#     'bedrooms': request.form["quantidade-quartos"],
+#     'bathrooms': request.form["quantidade-banheiros"],
+#     'parking_space': request.form["quantidade-vagas"]
+#    }, index=[0])
     with app.open_instance_resource('realestate_model.pkl', 'rb') as f:
         model = pickle.load(f)
     with app.open_instance_resource('OH_encoder.pkl', 'rb') as f:
         encoder = pickle.load(f)
+#    unencoded_cols = ['category', 'neighborhood']
+#    OH_cols = pd.DataFrame(encoder.transform(data_entry[unencoded_cols]))
+#    OH_cols.index = data_entry.index
+#    OH_cols.columns = encoder.get_feature_names_out()
+#    encoded_entry = data_entry.drop(unencoded_cols, axis=1)
+#    encoded_entry = pd.concat([encoded_entry, OH_cols], axis=1)
+#    prediction = 'R$ {:,.2f}'.format(
+#        model.predict(encoded_entry)[0]).replace(
+#            ',', '_').replace('.', ',').replace('_','.')
+    data_entry = np.array([
+        category[request.form["categoria"]],
+        localizacao_decoder[localizacao_form.index(request.form["localizacao"])],
+        request.form["area-util"],
+        request.form["area-total"],
+        request.form["quantidade-quartos"],
+        request.form["quantidade-banheiros"],
+        request.form["quantidade-vagas"]
+    ]).reshape(1, -1)
+
     unencoded_cols = ['category', 'neighborhood']
-    OH_cols = pd.DataFrame(encoder.transform(data_entry[unencoded_cols]))
-    OH_cols.index = data_entry.index
-    OH_cols.columns = encoder.get_feature_names_out()
-    encoded_entry = data_entry.drop(unencoded_cols, axis=1)
-    encoded_entry = pd.concat([encoded_entry, OH_cols], axis=1)
+
+    # Perform one-hot encoding on data_entry using OH_encoder.transform
+    OH_cols = encoder.transform(data_entry[:, :len(unencoded_cols)])
+
+    # Concatenate the OH_cols array with data_entry
+    encoded_entry = np.concatenate([data_entry[:, len(unencoded_cols):], OH_cols], axis=1)
+
+
     prediction = 'R$ {:,.2f}'.format(
         model.predict(encoded_entry)[0]).replace(
             ',', '_').replace('.', ',').replace('_','.')
+
+
+
     if request.args.get('lang'):
         lang = request.args.get('lang')
     return render_template(
