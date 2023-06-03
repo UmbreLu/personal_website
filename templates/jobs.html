@@ -87,19 +87,19 @@
 <a class="normal" href="{{ url_for('real_estate') }}">Estimador de preço para an&uacute;ncio de im&oacute;vel no Distrito Federal</a>
 {% elif lang == "en" %}
 <strong>Real Estate Price Estimator (AI)</strong><br>
-<a class="normal" href="{{ url_for('real_estate') }}">Price estimator for property advertisement in the Federal District</a>
+<a class="normal" href="{{ url_for('real_estate', lang='en') }}">Price estimator for property advertisement in the Federal District</a>
 {% elif lang == "fr" %}
 <strong>Estimateur de prix immobilier (IA)</strong><br>
-<a class="normal" href="{{ url_for('real_estate') }}">Estimateur de prix pour l'annonce d'une propriété dans le district fédéral</a>
+<a class="normal" href="{{ url_for('real_estate', lang='fr') }}">Estimateur de prix pour l'annonce d'une propriété dans le district fédéral</a>
 {% elif lang == "es" %}
 <strong>Estimador de precios de bienes raíces (IA)</strong><br>
-<a class="normal" href="{{ url_for('real_estate') }}">Estimador de precio para anuncios de propiedades en el Distrito Federal</a>
+<a class="normal" href="{{ url_for('real_estate', lang='es') }}">Estimador de precio para anuncios de propiedades en el Distrito Federal</a>
 {% elif lang == "de" %}
 <strong>Immobilienpreisschätzer (KI)</strong><br>
-<a class="normal" href="{{ url_for('real_estate') }}">Preisschätzer für Immobilienanzeigen im Bundesdistrikt</a>
+<a class="normal" href="{{ url_for('real_estate', lang='de') }}">Preisschätzer für Immobilienanzeigen im Bundesdistrikt</a>
 {% elif lang == "cn" %}
 <strong>房地产价格估算器（人工智能）</strong><br>
-<a class="normal" href="{{ url_for('real_estate') }}">房地产广告定价估算器（适用于首都区）</a>
+<a class="normal" href="{{ url_for('real_estate', lang='cn') }}">房地产广告定价估算器（适用于首都区）</a>
 {% endif %}
 
 </p>
