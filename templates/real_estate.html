@@ -67,21 +67,191 @@ Aproveite enquanto a ferramenta est&aacute; disponibilizada aqui gratuitamente.
 </p>
   <br>
 {% if prediction is defined %}
-    <p class="prediction"><strong>Seu im&oacute;vel foi avaliado em: {{ prediction }}</strong></p>
+    <div style="
+    background-color: rgb(48, 48, 48); 
+    color: darkgrey;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 20px;
+    ">
+    <p>Im&oacute;vel do tipo {{ query["categoria"] }} localizado em {{ query["localizacao"] }} com {{ query["area-util"] }}<sup>2</sup> de &aacute;rea &uacute;til, {{ query["area-total"] }}<sup>2</sup> de &aacute;rea total, {{ query["quantidade-quartos"] }} quartos, {{ query["quantidade-banheiros"] }} banheiros e {{ query["quantidade-vagas"] }} vagas de garagem privativa:
+    <p class="prediction"><strong>Avalia&ccedil;&atilde;o {{ prediction }} .</strong></p>
+    </div>
+{% endif %}
+{% if unsuccessful is defined %}
+    <p class="warning">O serviço de estimativa parece estar offline. Tente novamente mais tarde.</p>
 {% endif %}
 {% endif %}
+{% if lang == "en" %}
+<h1 class="title">
+Price Estimate for Property in the Federal District - Brazil
+</h1>
 <br>
-<form action="{{ url_for('real_estate_post') }}" method="post">
+<p>
+Would you like to have an idea of what would be the appropriate value to advertise your property in the Federal District without paying a high price to an experienced real estate agent or a large real estate company? Your problems are over!
+</p>
+<p>
+My price estimator is an artificial intelligence that has been trained on thousands of property advertisement listings in the Federal District and, therefore, is capable of estimating, with some accuracy, the value at which your property could be advertised.
+</p>
+<p>
+Take advantage while the tool is available here for free.
+</p>
+  <br>
+{% if prediction is defined %}
+    <div style="
+    background-color: rgb(48, 48, 48); 
+    color: darkgrey;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 20px;
+    ">
+    <p>
+    Property of type {{ query["categoria"] }} located in {{ query["localizacao"] }} with {{ query["area-util"] }}<sup>2</sup> of usable area, {{ query["area-total"] }}<sup>2</sup> of total area, {{ query["quantidade-quartos"] }} bedrooms, {{ query["quantidade-banheiros"] }} bathrooms, and {{ query["quantidade-vagas"] }} private parking spaces.
+    </p>
+    <p class="prediction"><strong>
+    Evaluation: {{ prediction }}.
+    </strong></p>
+    </div>
+{% endif %}
+{% if unsuccessful is defined %}
+    <p class="warning">The estimation service appears to be offline. Please try again later.</p>
+{% endif %}
+{% endif %}
+{% if lang == "fr" %}
+<h1 class="title">Estimation de prix pour une propriété dans le district fédéral</h1>
+<br>
+<p>
+Vous aimeriez avoir une idée de la valeur appropriée pour annoncer votre propriété dans le district fédéral sans payer cher à un agent immobilier expérimenté ou à une grande agence immobilière ? Vos problèmes sont résolus !
+</p>
+<p>
+Mon estimateur de prix est une intelligence artificielle qui a été entraînée sur des milliers d'annonces immobilières dans le district fédéral et est donc capable d'estimer avec une certaine précision la valeur à laquelle votre propriété pourrait être annoncée.
+</p>
+<p>
+Profitez-en pendant que l'outil est disponible gratuitement ici.
+</p>
+<br>
+{% if prediction is defined %}
+<div style="
+background-color: rgb(48, 48, 48); 
+color: darkgrey;
+border: 2px solid black;
+margin: 10px;
+padding: 20px;
+ ">
+<p>Propriété de type {{ query["categoria"] }} située à {{ query["localizacao"] }} avec {{ query["area-util"] }}<sup>2</sup> de surface utilisable, {{ query["area-total"] }}<sup>2</sup> de surface totale, {{ query["quantidade-quartos"] }} chambres, {{ query["quantidade-banheiros"] }} salles de bains et {{ query["quantidade-vagas"] }} places de parking privées :
+<p class="prediction"><strong>Évaluation : {{ prediction }}.</strong></p>
+</div>
+{% endif %}
+{% if unsuccessful is defined %}
+<p class="warning">Le service d'estimation semble être hors ligne. Veuillez réessayer ultérieurement.</p>
+{% endif %}
+{% endif %}
+{% if lang == "es" %}
+<h1 class="title">Estimación de precio para una propiedad en el Distrito Federal</h1>
+<br>
+<p>
+¿Le gustaría tener una idea del valor apropiado para anunciar su propiedad en el Distrito Federal sin pagar mucho a un agente inmobiliario experimentado o a una gran inmobiliaria? ¡Sus problemas han terminado!
+</p>
+<p>
+Mi estimador de precios es una inteligencia artificial que ha sido entrenada con miles de publicaciones de anuncios de propiedades en el Distrito Federal y, por lo tanto, es capaz de estimar, con cierta precisión, el valor al que su propiedad podría ser anunciada.
+</p>
+<p>
+Aproveche mientras la herramienta esté disponible de forma gratuita aquí.
+</p>
+<br>
+{% if prediction is defined %}
+<div style="
+background-color: rgb(48, 48, 48);
+color: darkgrey;
+border: 2px solid black;
+margin: 10px;
+padding: 20px;
+ ">
+<p>Propiedad de tipo {{ query["categoria"] }} ubicada en {{ query["localizacao"] }} con {{ query["area-util"] }}<sup>2</sup> de área útil, {{ query["area-total"] }}<sup>2</sup> de área total, {{ query["quantidade-quartos"] }} habitaciones, {{ query["quantidade-banheiros"] }} baños y {{ query["quantidade-vagas"] }} plazas de aparcamiento privadas:
+<p class="prediction"><strong>Evaluación: {{ prediction }}.</strong></p>
+</div>
+{% endif %}
+{% if unsuccessful is defined %}
+<p class="warning">El servicio de estimación parece estar fuera de línea. Por favor, inténtelo nuevamente más tarde.</p>
+{% endif %}
+{% endif %}
+{% if lang == "de" %}
+<h1 class="title">Preisschätzung für Immobilien im Bundesdistrikt</h1>
+<br>
+<p>
+Möchten Sie eine Vorstellung davon haben, welcher angemessene Wert wäre, um Ihre Immobilie im Bundesdistrikt zu bewerben, ohne einem erfahrenen Makler oder einem großen Immobilienunternehmen viel Geld zu zahlen? Ihre Probleme sind gelöst!
+</p>
+<p>
+Mein Preisermittler ist eine künstliche Intelligenz, die auf Tausenden von Immobilienanzeigen im Bundesdistrikt trainiert wurde und daher in der Lage ist, den Wert zu schätzen, zu dem Ihre Immobilie mit einiger Genauigkeit beworben werden könnte.
+</p>
+<p>
+Nutzen Sie die Gelegenheit, solange das Tool hier kostenlos verfügbar ist.
+</p>
+<br>
+{% if prediction is defined %}
+<div style="
+background-color: rgb(48, 48, 48);
+color: darkgrey;
+border: 2px solid black;
+margin: 10px;
+padding: 20px;
+ ">
+<p>Immobilie vom Typ {{ query["categoria"] }} in {{ query["localizacao"] }} mit einer Nutzfläche von {{ query["area-util"] }}<sup>2</sup>, einer Gesamtfläche von {{ query["area-total"] }}<sup>2</sup>, {{ query["quantidade-quartos"] }} Schlafzimmern, {{ query["quantidade-banheiros"] }} Badezimmern und {{ query["quantidade-vagas"] }} privaten Parkplätzen:
+<p class="prediction"><strong>Bewertung: {{ prediction }}.</strong></p>
+</div>
+{% endif %}
+{% if unsuccessful is defined %}
+<p class="warning">Der Schätzdienst scheint offline zu sein. Bitte versuchen Sie es später erneut.</p>
+{% endif %}
+{% endif %}
+{% if lang == "cn" %}
+<h1 class="title">首都区房地产价格估算</h1>
+<br>
+<p>
+您想知道在不付给经验丰富的房地产经纪人或大型房地产公司高价的情况下，如何合理定价您在首都区的房地产？您的问题已经解决！
+</p>
+<p>
+我的价格估算器是一种基于首都区数千条房地产广告列表进行训练的人工智能，因此能够相对准确地估算出您的房地产可以以什么价格进行广告宣传。
+</p>
+<p>
+趁着这个工具在这里免费提供的机会，请好好利用。
+</p>
+<br>
+{% if prediction is defined %}
+<div style="
+background-color: rgb(48, 48, 48);
+color: darkgrey;
+border: 2px solid black;
+margin: 10px;
+padding: 20px;
+ ">
+<p>房地产类型为{{ query["categoria"] }}，位于{{ query["localizacao"] }}
+，使用面积为{{ query["area-util"] }}<sup>2</sup>，总面积为{{ query["area-total"] }}<sup>2</sup>，{{ query["quantidade-quartos"] }}个卧室，{{ query["quantidade-banheiros"] }}个浴室和{{ query["quantidade-vagas"] }}个私人停车位：
+<p class="prediction"><strong>评估：{{ prediction }}。</strong></p>
+</div>
+{% endif %}
+{% if unsuccessful is defined %}
+<p class="warning">估算服务似乎已离线。请稍后重试。</p>
+{% endif %}
+{% endif %}
+
+
+
+
+
+<br>
+<form action="{{ url_for('real_estate_post') }} " method="post">
     <label for="categoria">Categoria do imóvel:</label>
-    <select id="categoria" name="categoria">
+    <select id="categoria" name="categoria" {% if prediction is defined %}value="{{ query["categoria"] }}"{% endif %}>
+
       <option value="apartamento">Apartamento</option>
       <option value="casa">Casa</option>
       <option value="terreno">Terreno</option>
       <option value="comercial">Comercial</option>
     </select>
-
     <label for="localizacao">Localização:</label>
-    <select id="localizacao" name="localizacao">
+    <select id="localizacao" name="localizacao" {% if prediction is defined %}value="{{ query["localizacao"] }}"{% endif %}>
+
       <option value="Asa Sul">Asa Sul</option>
       <option value="Asa Norte">Asa Norte</option>
       <option value="Lago Sul">Lago Sul</option>
@@ -131,19 +301,58 @@ Aproveite enquanto a ferramenta est&aacute; disponibilizada aqui gratuitamente.
     </select>
 
     <label for="area-util">Área útil (m<sup>2</sup>):</label>
-    <input type="number" id="area-util" name="area-util" required>
+    <input type="number" id="area-util" name="area-util" required
+{% if prediction is defined %}
+value="{{ query["area-util"] }}"
+{% endif %}
+        >
 
     <label for="area-total">Área total (m<sup>2</sup>):</label>
-    <input type="number" id="area-total" name="area-total" required>
+    <input type="number" id="area-total" name="area-total" required
+{% if prediction is defined %}
+value="{{ query["area-total"] }}"
+{% endif %}
+>
 
     <label for="quantidade-quartos">Quantidade de quartos:</label>
-    <input type="number" id="quantidade-quartos" name="quantidade-quartos" required>
+    <input type="number" id="quantidade-quartos" name="quantidade-quartos" required
+{% if prediction is defined %}
+value="{{ query["quantidade-quartos"] }}"
+{% endif %}
+>
 
     <label for="quantidade-banheiros">Quantidade de banheiros:</label>
-    <input type="number" id="quantidade-banheiros" name="quantidade-banheiros" required>
+    <input type="number" id="quantidade-banheiros" name="quantidade-banheiros" required
+{% if prediction is defined %}
+value="{{ query["quantidade-banheiros"] }}"
+{% endif %}
+>
 
     <label for="quantidade-vagas">Quantidade de vagas de garagem privativas:</label>
-    <input type="number" id="quantidade-vagas" name="quantidade-vagas" required>
+    <input type="number" id="quantidade-vagas" name="quantidade-vagas" required
+{% if prediction is defined %}
+value="{{ query["quantidade-vagas"] }}"
+{% endif %}
+>
+
+{% if lang == "pt" %}
+<input type="hidden" name="lang" value="pt">
+{% endif %}
+{% if lang == "en" %}
+<input type="hidden" name="lang" value="en">
+{% endif %}
+{% if lang == "cn" %}
+<input type="hidden" name="lang" value="cn">
+{% endif %}
+{% if lang == "es" %}
+<input type="hidden" name="lang" value="es">
+{% endif %}
+{% if lang == "fr" %}
+<input type="hidden" name="lang" value="fr">
+{% endif %}
+{% if lang == "de" %}
+<input type="hidden" name="lang" value="de">
+{% endif %}
 
     <input type="submit" value="Enviar">
 

@@ -1,115 +1,8 @@
 from flask import Flask, render_template, request
-import numpy as np
-import pickle
+import requests
+import json
 
 app = Flask(__name__)
-
-category = {
-    'apartamento': 'apartamentos',
-    'casa': 'casas',
-    'terreno': 'terrenos',
-    'comercial': 'comerciais'
-}
-
-localizacao_form = [
-    "Asa Sul",
-    "Asa Norte",
-    "Brasília, Distrito Federal",
-    "Lago Sul",
-    "Noroeste",
-    "Lago Norte",
-    "Octogonal",
-    "Taguatinga",
-    "Guará",
-    "Sudoeste",
-    "Park Way",
-    "Sobradinho",
-    "Cruzeiro",
-    "Jardim Botânico",
-    "Águas Claras",
-    "Ceilandia",
-    "Vila Planalto",
-    "Setor Habitacional Tororo",
-    "Setor de Mansões Dom Bosco",
-    "Granja Do Torto, Brasília",
-    "Vila Da Telebrasilia",
-    "Zona Central de Brasília",
-    "Park Sul",
-    "Setor de Habitações Coletivas Norte",
-    "Setor de Armazenagem e Abastecimento Norte",
-    "Centro de Atividades do Lago Norte",
-    "Taquari",
-    "Jardins Mangueiral",
-    "Quadra Mista Sudoeste",
-    "Setor De Autarquias Sul",
-    "Samambaia",
-    "Mansões do Lago",
-    "Setor De Clubes Esportivos Sul, Brasília",
-    "Guará",
-    "Paranoá",
-    "SIG - Setor De Industria Graficas",
-    "Planaltina",
-    "Recanto das Emas",
-    "Candangolândia",
-    "Noroeste",
-    "Zona Rural",
-    "Setor Militar Urbano",
-    "Itapoã",
-    "Zona Industrial",
-    "Arniqueiras, Águas Claras",
-    "Areal, Águas Claras",
-    "Zona Rural, Águas Claras"
-]
-
-localizacao_decoder = [
-    "Asa Sul, Brasília",
-    "Asa Norte, Brasília",
-    "Brasília, Distrito Federal",
-    "Lago Sul, Brasília",
-    "Noroeste, Brasília",
-    "Lago Norte, Brasília",
-    "Octogonal, Brasília",
-    "Taguatinga, Brasília",
-    "Guará, Brasília",
-    "Sudoeste, Brasília",
-    "Park Way, Brasília",
-    "Sobradinho, Brasília",
-    "Cruzeiro, Brasília",
-    "Setor Habitacional Jardim Botânico, Brasília",
-    "Águas Claras",
-    "Ceilandia, Brasília",
-    "Vila Planalto, Brasília",
-    "Setor Habitacional Tororo, Brasília",
-    "Setor de Mansões Dom Bosco, Brasília",
-    "Granja Do Torto, Brasília",
-    "Vila Da Telebrasilia, Brasília",
-    "Centro, Brasília",
-    "Park Sul, Brasília",
-    "Setor de Habitações Coletivas Norte, Brasília",
-    "Setor de Armazenagem e Abastecimento Norte, Brasília",
-    "Centro de Atividades, Brasília",
-    "Taquari, Brasília",
-    "Setor Habitacional Jardins Mangueiral, Brasília",
-    "Quadra Mista Sudoeste, Brasília",
-    "Setor De Autarquias Sul, Brasília",
-    "Samambaia, Brasília",
-    "Mansões do Lago, Brasília",
-    "Setor De Clubes Esportivos Sul, Brasília",
-    "Guará, Brasília, Brasília",
-    "Paranoá, Brasília",
-    "SIG - Setor De Industria Graficas, Brasília",
-    "Planaltina, Brasília",
-    "Recanto das Emas, Brasília",
-    "Candangolândia, Brasília",
-    "Noroeste, Brasília, Brasília",
-    "Zona Rural, Brasília",
-    "Setor Militar Urbano, Brasília",
-    "Itapoã, Brasília",
-    "Zona Industrial, Brasília",
-    "Arniqueiras, Águas Claras",
-    "Areal, Águas Claras",
-    "Zona Rural, Águas Claras"
-]
 
 @app.get('/')
 def greeting():
@@ -186,63 +79,69 @@ def real_estate(lang='pt'):
 @app.post('/real_estate')
 def real_estate_post(lang='pt'):
     """
-    post method
+    Real estate project page
     """
-#    data_entry = pd.DataFrame(
-#    {'category': category[request.form["categoria"]],
-#     'neighborhood': localizacao_decoder[localizacao_form.index(request.form["localizacao"])],
-#     'footage': request.form["area-util"],
-#     'total_footage': request.form["area-total"],
-#     'bedrooms': request.form["quantidade-quartos"],
-#     'bathrooms': request.form["quantidade-banheiros"],
-#     'parking_space': request.form["quantidade-vagas"]
-#    }, index=[0])
-    with app.open_instance_resource('realestate_model.pkl', 'rb') as f:
-        model = pickle.load(f)
-    with app.open_instance_resource('OH_encoder.pkl', 'rb') as f:
-        encoder = pickle.load(f)
-#    unencoded_cols = ['category', 'neighborhood']
-#    OH_cols = pd.DataFrame(encoder.transform(data_entry[unencoded_cols]))
-#    OH_cols.index = data_entry.index
-#    OH_cols.columns = encoder.get_feature_names_out()
-#    encoded_entry = data_entry.drop(unencoded_cols, axis=1)
-#    encoded_entry = pd.concat([encoded_entry, OH_cols], axis=1)
-#    prediction = 'R$ {:,.2f}'.format(
-#        model.predict(encoded_entry)[0]).replace(
-#            ',', '_').replace('.', ',').replace('_','.')
-    data_entry = np.array([
-        category[request.form["categoria"]],
-        localizacao_decoder[localizacao_form.index(request.form["localizacao"])],
-        request.form["area-util"],
-        request.form["area-total"],
-        request.form["quantidade-quartos"],
-        request.form["quantidade-banheiros"],
-        request.form["quantidade-vagas"]
-    ]).reshape(1, -1)
+    if request.form.get('lang'):
+        lang = request.form.get('lang')
 
-    unencoded_cols = ['category', 'neighborhood']
+    # URL of the API endpoint
+    url = "http://umbrelu.pythonanywhere.com/real_estate_estimator"
 
-    # Perform one-hot encoding on data_entry using OH_encoder.transform
-    OH_cols = encoder.transform(data_entry[:, :len(unencoded_cols)])
+    # Prepare the JSON payload
+    if lang in ('pt', 'es'):
+        payload = {
+            "input_feature": {
+                "categoria": request.form.get("categoria"),
+                "localizacao": request.form.get("localizacao"),
+                "area-util": request.form.get("area-util"),
+                "area-total": request.form.get("area-total"),
+                "quantidade-quartos": request.form.get("quantidade-quartos"),
+                "quantidade-banheiros": request.form.get("quantidade-banheiros"),
+                "quantidade-vagas": request.form.get("quantidade-vagas")
+            },
+            "parse": "brazil"
+        }
+    else:
+        payload = {
+            "input_feature": {
+                "categoria": request.form.get("categoria"),
+                "localizacao": request.form.get("localizacao"),
+                "area-util": request.form.get("area-util"),
+                "area-total": request.form.get("area-total"),
+                "quantidade-quartos": request.form.get("quantidade-quartos"),
+                "quantidade-banheiros": request.form.get("quantidade-banheiros"),
+                "quantidade-vagas": request.form.get("quantidade-vagas")
+            },
+            "parse": "international"
+        }
 
-    # Concatenate the OH_cols array with data_entry
-    encoded_entry = np.concatenate([data_entry[:, len(unencoded_cols):], OH_cols], axis=1)
+    # Convert payload to JSON string
+    json_payload = json.dumps(payload)
 
+    # Set the headers for the request
+    headers = {
+        "Content-Type": "application/json"
+    }
 
-    prediction = 'R$ {:,.2f}'.format(
-        model.predict(encoded_entry)[0]).replace(
-            ',', '_').replace('.', ',').replace('_','.')
+    # Make the POST request
+    response = requests.post(url, data=json_payload, headers=headers)
 
-
-
-    if request.args.get('lang'):
-        lang = request.args.get('lang')
-    return render_template(
-        'real_estate.html',
-        page='real_estate',
-        lang=lang,
-        prediction=prediction
-        )
+    if response.status_code == 200:
+        response_data = response.json()
+        return render_template(
+            'real_estate.html',
+            page='real_estate',
+            lang=lang,
+            prediction=response_data["prediction"],
+            query=payload["input_feature"]
+            )
+    else:
+        return render_template(
+            'real_estate.html',
+            page='real_estate',
+            lang=lang,
+            unsuccessful=True
+            )
 
 if __name__ == "__main__":
     app.run(debug=True)
