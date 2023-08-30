@@ -112,5 +112,10 @@
     <a class="normal" href="https://gist.github.com/UmbreLu/cb42bcac8bcc4bdabb5e30d76b26141b">Link do notebook (informações sensíveis retiradas)</a><br>
     Código utilizado para obtenção e tratamento dos mesmos dados do projeto acima, porém utilizando de técnicas de web scraping, pois a plataforma ainda não tinha informado a disponibilidade de API.
 </p>
-
+<p>
+    <Strong>Solução geral de ETL utilizada no BI</strong><br>
+    Código privado<br>
+    <img src="{{ url_for('static', filename='ETL em BI.png') }}">
+    Código utilizado para unificar (warehousing) os dados de métricas publicitárias das diversas plataformas online. Altamente tolerante a variações de input, retira os dados de planilhas Google e carrega em uma planilha Google unificada. Essa escolha de design se deve à restrição da equipe de trabalhar apenas com planilhas Google, Supermetrics e Looker Studio. A compatibilização com as planilhas é um desafio a parte, devido a possíveis variações de formação que não ocorrem em arquivos CSV ou se trabalhando com gerenciadores de bancos de dados, além de, no caso das planilhas Google, ações que modificam as informações (insert, update e delete) deverem ser realizadas exclusivamente via API Google. 
+</p>
 {% endblock %}
