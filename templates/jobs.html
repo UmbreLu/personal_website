@@ -115,7 +115,7 @@
 <p>
     <Strong>Solução geral de ETL utilizada no BI</strong><br>
     Código privado<br>
-    <img src="{{url_for('static', filename='ETL em BI.png')}}" alt="running terminal pic" class="mid_text_2"><br>
+    <img src="{{url_for('static', filename='bi_etl.png')}}" alt="running terminal pic" class="mid_text_2"><br>
     Código utilizado para unificar (warehousing) os dados de métricas publicitárias das diversas plataformas online. Altamente tolerante a variações de input, retira os dados de planilhas Google e os carrega de forma unificada em uma nova planilha. Essa escolha de design se deve à restrição da equipe de trabalhar apenas com planilhas Google, Supermetrics e Looker Studio. A compatibilização com as planilhas é um desafio a parte, devido a possíveis variações de formação que não ocorrem em arquivos CSV ou se trabalhando com gerenciadores de bancos de dados, além de, no caso das planilhas Google, ações que modificam as informações (insert, update e delete) deverem ser realizadas exclusivamente via API Google. 
 </p>
 {% endblock %}
