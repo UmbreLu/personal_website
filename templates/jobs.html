@@ -102,20 +102,39 @@
 <a class="normal" href="{{ url_for('real_estate', lang='cn') }}">房地产广告定价估算器（适用于首都区）</a>
 {% endif %}
 </p>
+{% if lang == "pt" %}
 <p>
     <Strong>Gerador de Relatório para monitoramento de campanha publicitária</strong><br>
-    <a class="normal" href="https://gist.github.com/UmbreLu/a0fb6cca3f342ad79a40df79e2e08620">Link do notebook (informações sensíveis retiradas)</a><br>
+    <a class="normal" target="_blank" href="https://gist.github.com/UmbreLu/a0fb6cca3f342ad79a40df79e2e08620">Link do notebook (informações sensíveis retiradas)</a><br>
     Notebook Jupyter que acessa a API de um serviço de adserver para baixar métricas publicitárias de uma campanha, trata e formata os dados para gerar um relatório em planilha Excel seguindo as especificações da equipe de mídia responsável.
 </p>
 <p>
     <Strong>Gerador de Relatório para monitoramento de campanha publicitária versão web scraper</strong><br>
-    <a class="normal" href="https://gist.github.com/UmbreLu/cb42bcac8bcc4bdabb5e30d76b26141b">Link do notebook (informações sensíveis retiradas)</a><br>
+    <a class="normal" target="_blank" href="https://gist.github.com/UmbreLu/cb42bcac8bcc4bdabb5e30d76b26141b">Link do notebook (informações sensíveis retiradas)</a><br>
     Código utilizado para obtenção e tratamento dos mesmos dados do projeto acima, porém utilizando de técnicas de web scraping, pois a plataforma ainda não tinha informado a disponibilidade de API.
 </p>
 <p>
     <Strong>Solução geral de ETL utilizada no BI</strong><br>
     Código privado<br>
-    <img src="{{ url_for('static', filename='bi_etl_trimed.png') }}" alt="running terminal pic" class="mid_text_2"><br>
-    Código utilizado para unificar (warehousing) os dados de métricas publicitárias das diversas plataformas online. Altamente tolerante a variações de input, retira os dados de planilhas Google e os carrega de forma unificada em uma nova planilha. Essa escolha de design se deve à restrição da equipe de trabalhar apenas com planilhas Google, Supermetrics e Looker Studio. A compatibilização com as planilhas é um desafio a parte, devido a possíveis variações de formação que não ocorrem em arquivos CSV ou se trabalhando com gerenciadores de bancos de dados, além de, no caso das planilhas Google, ações que modificam as informações (insert, update e delete) deverem ser realizadas exclusivamente via API Google. 
+    <img src="{{ url_for('static', filename='bi_etl_trimed.png') }}" alt="running terminal pic" class="mid_text_1"><br>
+    Essa solução é um código Python para realização das tarefas de ETL, unificando os dados de métricas de publicidade online de diversas plataformas (redes sociais e adservers) puxadas via extensão Supermetrics for Google Sheets em um único arquivo de planilha, por sua vez utilizada como fonte de dados no Looker Studio. O armazenamento de dados exclusivamente em forma de Planilhas Google era uma exigência da gerência da equipe de BI.
 </p>
+{% elif lang == "en" %}
+<p>
+    <Strong>Marketing Campaign Report Generator</strong><br>
+    <a class="normal" target="_blank" href="https://gist.github.com/UmbreLu/a0fb6cca3f342ad79a40df79e2e08620">Notebook on Gist (sensitive data removed)</a><br>
+    This Jupyter Notebook retrieves market campaign metrics via an API call from an adserver, cleans it up, restructure it them build a Excel report following the specs the client (media team) wanted.
+</p>
+<p>
+    <Strong>Marketing Campaign Report Generator (web scraping version)</strong><br>
+    <a class="normal" target="_blank" href="https://gist.github.com/UmbreLu/cb42bcac8bcc4bdabb5e30d76b26141b">Notebook on Gist (sensitive data removed)</a><br>
+    Same functionality, but getting the data through web scraping (Selenium and BS4).
+</p>
+<p>
+    <Strong>ETL Automation Solution for my former Business Analytics role</strong><br>
+    Closed source (for the moment)<br>
+    <img src="{{ url_for('static', filename='bi_etl_trimed.png') }}" alt="running terminal pic" class="mid_text_2"><br>
+    This ETL code was used to unify several and variable analytics data from social networks and adservers. The config files were edited as Google Sheets sheets as well as the inputs and the unified output (through Google's API). This was done this way to attend the team's requirement of only storing data on Google Sheets.
+</p>
+{% endif %}
 {% endblock %}

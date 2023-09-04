@@ -5,6 +5,7 @@
 {% block body %}
 <br>
 <br>
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
     <div style="max-width: 500px; margin: auto;">
         {% if lang == "pt" %}
         <h2 style="text-align: left;"><strong>Ci&ecirc;ncia de Dados</strong></h2>
@@ -18,35 +19,14 @@
         <h2 style="text-align: center;"><strong>- & -</strong></h2>
         <br>
         <h2 style="text-align: right;"><strong>Python Development</strong></h2>
-        {% elif lang == "cn" %}
-        <h2 style="text-align: left;"><strong>数据科学</strong></h2>
-        <br>
-        <h2 style="text-align: center;"><strong>- & -</strong></h2>
-        <br>
-        <h2 style="text-align: right;"><strong>Python 开发</strong></h2>
-        {% elif lang == "fr" %}
-        <h2 style="text-align: left;"><strong>Science des Donn&eacute;es</strong></h2>
-        <br>
-        <h2 style="text-align: center;"><strong>- & -</strong></h2>
-        <br>
-        <h2 style="text-align: right;"><strong>D&eacute;veloppement Python</strong></h2>
-        {% elif lang == "de" %}
-        <h2 style="text-align: left;"><strong>Data Science</strong></h2>
-        <br>
-        <h2 style="text-align: center;"><strong>- & -</strong></h2>
-        <br>
-        <h2 style="text-align: right;"><strong>Python-Entwicklung</strong></h2>
-        {% elif lang == "es" %}
-        <h2 style="text-align: left;"><strong>Ciencia de Datos</strong></h2>
-        <br>
-        <h2 style="text-align: center;"><strong>- & -</strong></h2>
-        <br>
-        <h2 style="text-align: right;"><strong>Desarrollo de Python</strong></h2>
         {% endif %}
     </div>
+    <div style="padding-right: 40px;">
+        <img src="{{url_for('static', filename='my_photo.jpeg')}}" alt="main profile picture" class="mid_text_2">
+    </div>
+</div>
 <br>
 <br>
-<img src="{{url_for('static', filename='prof2.jpeg')}}" alt="main profile picture" class="mid_text_2">
     <br>
         <div class="badge_div">
             <div class="badge">
